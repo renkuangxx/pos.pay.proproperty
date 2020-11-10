@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.show.My.VisitChoseHouseActivity">
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="选择楼栋" />
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/et_search"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dime_8dp"
+            android:layout_marginEnd="@dimen/dime_16dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_f1f1_radius18"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="@dimen/dime_16dp"
+            android:hint="请输入楼栋号"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_16sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:visibility="gone"
+            android:paddingRight="@dimen/dime_16dp"
+            android:text="取消"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_16sp" />
+
+    </LinearLayout>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_1dp"
+        android:background="#F0F0F0"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_below="@id/view"
+        android:id="@+id/tv_xiaoqu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8"
+        android:textColor="#222222"
+        android:text="源昌新天地"
+        android:drawablePadding="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dime_8dp"
+        android:visibility="visible"
+        android:drawableLeft="@mipmap/icon_dinwei"/>
+    <View
+        android:layout_below="@+id/tv_xiaoqu"
+        android:id="@+id/underline_only_child"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_8dp"
+        android:background="#F0F0F0"
+        android:visibility="visible" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/underline_only_child"
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_below="@+id/underline_only_child"
+        android:id="@+id/ll_visibility"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="148dp"
+            android:layout_height="134dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/vehiclemanagement_default" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:gravity="center"
+            android:text="暂时没有数据"
+            android:textColor="@color/text_97"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_search_content1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        android:visibility="gone"
+        />
+</RelativeLayout>
+
+
+</LinearLayout>

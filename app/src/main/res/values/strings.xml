@@ -1,0 +1,125 @@
+<resources>
+    <string name="filter_vcode">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="house_sheshi">补录</string>
+    <string name="app_name">门口缴费</string>
+    <string name="app_name_beta">门口缴费beta版</string>
+
+    <string name="delete">删除</string>
+    <string name="system_error">服务器忙，请稍后重试</string>
+
+    <string name="org">厦门鲸牌互连科技有限责任公司荣誉出品</string>
+
+    <string name="forget_password_title">找回密码</string>
+    <string name="cat_title">车辆管理</string>
+    <string name="car_add">添加车辆</string>
+    <string name="manage_title">添加成员</string>
+    <string name="edit_title">编辑成员</string>
+    <string name="home_message">天华硅谷庄园</string>
+    <string name="home_exits">再按一次后退键退出程序</string>
+    <string name="home_login">登录</string>
+    <string name="home_login_name">账号</string>
+    <string name="home_login_password">密码</string>
+    <string name="submit">提交</string>
+    <string name="login">登录</string>
+    <string name="add_cat">添加车辆</string>
+    <string name="password">密码</string>
+    <string name="register">认证</string>
+    <string name="commit">提交</string>
+    <string name="register1">用户注册</string>
+    <string name="text_name">提交</string>
+    <string name="home_login_no_password">忘记密码?</string>
+    <string name="login_password">欢迎来门口逛逛</string>
+    <string name="plaess_login">请输入手机号</string>
+    <string name="plaess_phone_login">请输入手机号</string>
+    <string name="plaess_verification_code">请输入验证码</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="plaess_password">请输入密码</string>
+    <string name="login_agreement">同意《用户服务协议》</string>
+    <string name="register_name_digits">._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+    <string name="home_login_null">密码或账号不能为空</string>
+    <string name="home_login_password_null">密码不能为空</string>
+    <string name="home_login_password_length">密码长度为6~18位</string>
+    <string name="register_password_length">请设置密码（最少6位）</string>
+    <string name="register_new_password_length">请设置新密码（最少6位）</string>
+    <string name="home_not_network">网络无法连接</string>
+    <string name="login_agreement_go">已有账号，去登录</string>
+    <string name="verification_time">已发送（%1$ss）</string>
+    <string name="cat_text">您还未添加车辆和车位呢～</string>
+    <string name="car_manage">车辆管理</string>
+    <string name="member_manage">成员管理</string>
+    <string name="yes">确定</string>
+    <string name="plate_number_tip">请输入有效的车牌号</string>
+
+    <string name="download_dialog_title">正在下载</string>
+
+    <!-- 首页 -->
+    <string name="home_tips">Hi，来门口逛逛吧～</string>
+    <string name="no_face_id">还未进行小区门禁的人脸登记</string>
+    <string name="go">立即前往</string>
+    <string name="home_report">报事报修</string>
+    <string name="guest_tip">请先到物业中心进行认证</string>
+
+    <!-- 缴费 -->
+    <string name="title_activity_payment">PaymentActivity</string>
+    <string name="property_payment_title">物业缴费</string>
+    <string name="property_search_title">物业费查询</string>
+    <string name="property_payment_history_title">缴费记录</string>
+    <string name="property_payment_detail_title">缴费详情</string>
+    <string name="no_payment_tip">您还没有待缴记录哦~</string>
+    <string name="no_payment_records_tip">您还没有缴费记录哦~</string>
+    <string name="pay_tip">不允许在最早账单未结清的情况下选择后续账单缴费</string>
+    <string name="pay_tip1">请选择缴费月份</string>
+    <string name="pay">立即缴费</string>
+    <string name="pay_money">缴费金额</string>
+    <string name="alipay">支付宝</string>
+    <string name="confirm_pay">确认支付</string>
+
+    <string name="check_out"></string>
+    <string name="rmb">￥</string>
+    <string name="pay_success">支付成功</string>
+
+    <string name="myself">自己</string>
+    <string name="add_report">添加报事</string>
+
+    <string name="notice_list">全部公告</string>
+    <string name="notice">公告</string>
+    <string name="no_record">暂无数据</string>
+    <string name="service_description">服务说明：\n本服务暂不提供机打充值发票，运营商可否提供机打发票请以当地运营商政策为准；您可联系南京红蚁网络科技有限公司索取定额发票。</string>
+
+
+    <!-- 个人中心 -->
+    <string name="personal_center_no_face">未登记</string>
+    <string name="personal_center_exist_face">已登记</string>
+
+    <!-- 我的 -->
+    <string name="point">积分</string>
+    <string name="coupon">优惠券</string>
+    <string name="collect">收藏</string>
+    <string name="Company_profile">公司简介</string>
+
+    <!-- 开门 -->
+    <string name="open_door_tips">开门请注意有无尾随</string>
+    <string name="open_bluetooth_tips">您还未开启蓝牙，是否开启？</string>
+    <string name="open_bluetooth_cancel">暂不</string>
+    <string name="open_bluetooth_ok">开启</string>
+    <string name="no_device">尚未获取到设备列表,请稍后重试</string>
+    <string name="wait_open_door">正在开门，请稍后...</string>
+    <string name="too_far_try_again">您与设备距离较远，请靠近设备再试...</string>
+    <string name="no_device_near">附近没有匹配的设备...</string>
+    <string name="san_failure">设备扫描失败</string>
+
+    <!-- 人员管理-->
+    <string name="no_verify_records_tip">您还没有审核记录哦~</string>
+    <string name="add_member_limit_tip">您现在所在的房子人数已满，如果需要继续添加，请输入申请理由。</string>
+    <string name="refuce_reson">拒绝理由。</string>
+
+    <!-- 报事报修-->
+    <string name="urging_count">催办次数：%1$d次</string>
+    <string name="base_yes">是</string>
+    <string name="base_no">否</string>
+    <string name="next_step">下一步</string>
+    <string name="complete">完成</string>
+    <string name="share_title">快来门口驿站一起博状元吧</string>
+    <string name="share_content">博饼博大奖，爱拼才会赢！我们正在门口驿站博饼，一起来吧</string>
+    <string name="no_invoice_records_tip">暂无已开票信息</string>
+</resources>

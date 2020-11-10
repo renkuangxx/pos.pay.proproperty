@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/rl_dialog">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rl_button"
+        android:background="@drawable/app_shape_solid_white_10radius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_marginRight="@dimen/dime_16dp"
+        android:paddingRight="@dimen/dime_8dp"
+        android:paddingLeft="@dimen/dime_8dp"
+        android:paddingBottom="@dimen/dime_16dp"
+        android:scrollbars="none"
+        android:layout_marginTop="@dimen/dp_8"
+         />
+
+</LinearLayout>

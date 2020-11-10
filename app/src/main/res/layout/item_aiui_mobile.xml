@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_40dp"
+        android:paddingRight="@dimen/dime_16dp"
+        android:paddingLeft="@dimen/dime_16dp"
+        android:gravity="center_vertical"
+        android:drawableRight="@mipmap/phone"/>
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_1dp"
+        android:background="@color/gray_bg"/>
+
+</LinearLayout>

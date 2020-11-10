@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingBottom="@dimen/dime_16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dime_18dp"
+        android:textColor="@color/title_text_color"
+        android:textSize="18sp"
+        android:text="等待支付结果" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+
+    <ImageView
+        android:layout_width="@dimen/dime_60dp"
+        android:layout_height="@dimen/dime_60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dime_24dp"
+        android:src="@mipmap/waiting" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="26dp"
+        android:text="正在等待支付结果，请您确认是否支付成功？"
+        android:textColor="@color/text_55"
+        android:textSize="@dimen/dime_14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="56dp"
+        android:paddingStart="@dimen/dime_16dp"
+        android:paddingEnd="@dimen/dime_16dp">
+
+        <TextView
+            android:id="@+id/tv_not_pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dime_13dp"
+            android:paddingBottom="@dimen/dime_13dp"
+            android:text="暂未支付"
+            android:gravity="center"
+            android:background="@drawable/button_back"
+            android:textColor="@color/main"
+            android:textSize="@dimen/dime_16sp" />
+
+        <TextView
+            android:id="@+id/tv_pay_success"
+            android:layout_marginStart="@dimen/dime_16dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/button_login_shapes"
+            android:paddingTop="@dimen/dime_13dp"
+            android:paddingBottom="@dimen/dime_13dp"
+            android:text="我已支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_16sp" />
+    </LinearLayout>
+
+</LinearLayout>

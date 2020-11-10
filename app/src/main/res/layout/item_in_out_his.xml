@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dime_4dp"
+    android:layout_marginBottom="@dimen/dp_4"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_in_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dime_16dp"
+        android:textColor="@color/text_97"
+        android:textSize="@dimen/dime_14sp"
+        tools:text="进场时间：2020-02-23 12:45"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_1dp"
+        android:background="@color/line_f0" />
+
+    <TextView
+        android:id="@+id/tv_out_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dime_16dp"
+        android:textColor="@color/text_97"
+        android:textSize="@dimen/dime_14sp"
+        tools:text="进场时间：2020-02-23 12:45"
+
+        />
+</LinearLayout>

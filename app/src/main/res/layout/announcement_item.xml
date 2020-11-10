@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dime_16dp"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginRight="@dimen/dime_16dp"
+    android:background="@drawable/shape_white_corner_4"
+    android:paddingTop="@dimen/dime_8dp"
+    android:paddingBottom="@dimen/dime_8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_announcement_title"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="源昌君悦山停水通知"
+        android:textColor="#ff222222"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tv_announcement_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_announcement_title"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="9dp"
+        android:text="2020年2月10日16时开始，全小区停水1小时,请…"
+        android:textColor="#ff979797"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_announcement_time"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_below="@+id/tv_announcement_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="2020-02-10 10:09"
+        android:textColor="#ff979797"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

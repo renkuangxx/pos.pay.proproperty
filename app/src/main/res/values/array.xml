@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="grade_level">
+        <item>一级</item>
+        <item>二级</item>
+        <item>三级</item>
+        <item>四级</item>
+        <item>五级</item>
+        <item>六级</item>
+        <item>七级</item>
+    </string-array>
+    <string-array name="has_or_no">
+        <item>有</item>
+        <item>无</item>
+    </string-array>
+
+    <string-array name="yes_or_no">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+
+    <string-array name="sanitation_array">
+        <item>优</item>
+        <item>良</item>
+        <item>中</item>
+        <item>差</item>
+    </string-array>
+
+    <declare-styleable name="VerifyEditText">
+        <!--验证码的个数-->
+        <attr name="totalCount" format="integer" />
+        <!--  每个验证码的间隔间距-->
+        <attr name="intervalLength" format="integer" />
+        <!--底部的线的颜色-->
+        <attr name="lineColor" format="color" />
+        <!--输入框文字的颜色-->
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+
+</resources>

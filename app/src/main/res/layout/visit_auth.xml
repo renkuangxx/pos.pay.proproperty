@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:padding="@dimen/dime_16dp"
+    android:orientation="horizontal">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_yes"
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_back"
+        android:gravity="center"
+        android:paddingTop="@dimen/dime_13dp"
+        android:paddingBottom="@dimen/dime_13dp"
+        android:text="拒绝"
+        android:textColor="@color/main"
+        android:textSize="@dimen/dime_16sp" />
+
+    <TextView
+        android:id="@+id/tv_yes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="@dimen/dime_16dp"
+        app:layout_goneMarginStart="0dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_login_shape"
+        android:gravity="center"
+        android:paddingTop="@dimen/dime_13dp"
+        android:paddingBottom="@dimen/dime_13dp"
+        android:text="拒绝"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dime_16sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

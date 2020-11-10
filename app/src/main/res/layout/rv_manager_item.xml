@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:background="@drawable/shape_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+            <ImageView
+                android:layout_marginStart="@dimen/dime_10dp"
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/dime_48dp"
+                android:layout_height="@dimen/dime_48dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/touxiang" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_phone"
+                android:layout_toRightOf="@id/iv_head"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dime_16dp">
+
+                <TextView
+                    android:id="@+id/tv_manager_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刘经理"
+                    android:textStyle="bold"
+                    android:textColor="#222222"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:text="您的专属客服管家"
+                    android:textColor="@color/text_97"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dime_1dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_f6"
+            android:layout_marginTop="@dimen/dime_20dp"
+            android:layout_marginBottom="@dimen/dime_20dp"
+            />
+            <ImageView
+
+                android:id="@+id/iv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginLeft="@dimen/dime_16dp"
+                android:layout_marginRight="@dimen/dime_16dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/phone" />
+
+    </LinearLayout>
+
+</LinearLayout>

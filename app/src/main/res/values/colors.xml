@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#66A6FF</color>
+    <color name="color1C8CC9">#FF1C8CC9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whites">#F0F0F0</color>
+    <color name="gray">#f3f3f3</color>
+    <color name="red">#ff0000</color>
+    <color name="gray_bg">#f6f6f6</color>
+    <color name="translucent">#00000000</color>
+
+
+    <color name="linecolor">#dcdcdc</color>
+    <color name="line_color">#ffe9e9e9</color>
+    <color name="toast_bg">#cc000000</color>
+    <color name="text">#000000</color>
+    <color name="text_91">#919191</color>
+    <color name="text_97">#979797</color>
+    <color name="text_0d000000">#0D000000</color>
+    <color name="text_0d222222">#0D222222</color>
+    <color name="text_4ddd2828">#4ddd2828</color>
+    <color name="text_4DE12626">#4DE12626</color>
+    <color name="text_581E06">#FF581E06</color>
+    <color name="text_4a">#4a4a4a</color>
+    <color name="text_5c">#5c5c5c</color>
+    <color name="text_e5">#e5e5e5</color>
+    <color name="text_b4">#b4b4b4</color>
+    <color name="text_66">#666666</color>
+    <color name="text_57">#575757</color>
+    <color name="text_99">#999999</color>
+    <color name="text_2e">#2e2e2e</color>
+    <color name="text_blue">#006BFF</color>
+    <color name="text_blue_bg">#33006BFF</color>
+    <color name="color_f6">#f6f6f6</color>
+    <color name="text_color">#212121</color>
+    <color name="title_text_color">#222222</color>
+    <color name="blue_sky">#ff00bcd4</color>
+    <color name="title">#ff000000</color>
+    <color name="back_99">#99000000</color>
+    <color name="black_80">#80000000</color>
+    <color name="grey">#b2b2b2</color>
+    <color name="grey_font">#BDBDBD</color>
+    <color name="color_19c9b8">#19c9b8</color>
+    <color name="color_ff707e">#ff707e</color>
+    <color name="color_8c73ff">#8c73ff</color>
+
+    <color name="text_6689C1">#6689C1</color>
+    <color name="black">#000000</color>
+    <color name="gray_line">#ebebeb</color>
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="block_tip">#fcfcfc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+
+    <color name="home_main">#FFC125</color>
+    <color name="home_bule">#1ba8fc</color>
+    <color name="home_memory_empty">#EBF6FE</color>
+    <color name="home_cpu_empty">#FEF6E9</color>
+    <color name="home_purple">#7470ed</color>
+    <color name="home_palegreen">#00d0c8</color>
+    <color name="home_yellow">#fdc800</color>
+    <color name="home_black">#212121</color>
+    <color name="home_grgray_1">#999999</color>
+    <color name="home_grgray_2">#adadad</color>
+    <color name="home_sence_3">#F5F5F5</color>
+    <color name="home_sence_4">#444444</color>
+    <color name="home_line_1">#dbdbdb</color>
+    <color name="home_line_2">#ebebeb</color>
+    <color name="home_line_3">#f5f5f5</color>
+    <color name="btn_cancel">#F1F1F1</color>
+    <color name="text_f1f1f1">#F1F1F1</color>
+
+    <color name="text_66A6FF">#ff66A6FF</color>
+    <color name="text_64">#ff64A5FF</color>
+    <color name="main">#FF8A49</color>
+    <color name="color_f8f9fc">#f8f9fc</color>
+    <color name="main_33">#33FF8A49</color>
+    <color name="main_50">#803985FF</color>
+    <color name="main_2_50">#8039AAFF</color>
+    <color name="text_red">#ff3b30</color>
+    <color name="text_ff3a3a">#ff3a3a</color>
+    <color name="text_8f8f94">#8f8f94</color>
+
+    <color name="navigationBarColor">#f46444</color>
+    <color name="colorPrimaryDarkTrans">#CCf57257</color>
+
+    <color name="line_f6">#F6F6F6FF</color>
+    <color name="line_f0">#FFF0F0F0</color>
+    <color name="text_33">#333333</color>
+    <color name="text_55">#555555</color>
+    <color name="text_red_new">#ED7575</color>
+
+    <color name="translucent_white">#61FFFFFF</color>
+
+    <color name="new_energy">#68C68F</color>
+
+    <!-- **************************pickerview选择器常用颜色值********************************** -->
+    <color name="pickerview_divider_color">#9D9D9D</color>
+    <color name="pickerview_cancel_text_color">#979696</color>
+    <color name="pickerview_submit_text_color">#FAA359</color>
+    <color name="pickerview_title_text_color">#1A78EC</color>
+    <color name="pickerview_center_text_color">#333333</color>
+
+    <!--    人口普查-->
+    <color name="bg_census">#FFA940</color>
+    <color name="bg_census_pre">#44000000</color>
+    <color name="bg_census_default">#D9D9D9</color>
+    <color name="bg_front_default">#2BC125</color>
+
+
+    <color name="bg_line">#F8F8F8</color>
+    <color name="bg_check_out">#E8E7E7</color>
+
+</resources>

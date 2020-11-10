@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_103dp"
+        android:scaleType="fitXY"
+        android:background="@mipmap/bg_my_favorite"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/dime_17dp"
+        android:layout_marginTop="@dimen/dime_12dp"
+        android:text="我喜欢的"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_20sp"
+        android:includeFontPadding="false"
+        android:layout_marginBottom="@dimen/dime_5dp"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_30dp"
+        android:layout_gravity="bottom"
+        app:tabMode="fixed"
+        android:layout_below="@+id/tv_title"
+        app:tabIndicatorHeight="2dp"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabTextAppearance="@style/FavoriteTabLayoutTextStyle"/>
+    <com.jingpai.pos.customer.views.AutoHeightViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dime_12dp"
+        android:layout_below="@+id/tab_favorite"/>
+
+</RelativeLayout>

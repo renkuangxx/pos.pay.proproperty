@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_notice"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dime_52dp"
+    android:layout_marginTop="@dimen/dime_8dp"
+    android:layout_marginBottom="@dimen/dime_8dp"
+    android:layout_marginLeft="@dimen/dime_16dp"
+    android:layout_marginRight="@dimen/dime_16dp"
+    android:background="@drawable/app_shape_notice_bg"
+    android:paddingRight="@dimen/dime_16dp"
+    android:paddingLeft="@dimen/dime_14dp">
+
+
+
+    <ImageView
+        android:id="@+id/iv_notice"
+        android:layout_width="@dimen/dime_38dp"
+        android:layout_height="@dimen/dime_38dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_notice" />
+    <View
+        android:id="@+id/line"
+        android:layout_width="@dimen/dime_1dp"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/iv_notice"
+        android:layout_alignBottom="@+id/iv_notice"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_marginRight="@dimen/dime_14dp"
+        android:layout_toEndOf="@+id/iv_notice"
+        android:background="@color/line_color" />
+    <TextView
+        android:id="@+id/tv_notice_pass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dime_6dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@+id/line"
+        android:layout_toLeftOf="@+id/iv_more_notice"
+        android:text="查看往期公告～"
+        android:visibility="gone"
+        android:textColor="@color/text_33"/>
+    <ViewFlipper
+        android:id="@+id/ts_notice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dime_6dp"
+        android:layout_centerVertical="true"
+        android:flipInterval="3000"
+        android:visibility="visible"
+        android:inAnimation="@anim/enter_bottom"
+        android:outAnimation="@anim/leave_top"
+        android:layout_toRightOf="@+id/line"
+        android:layout_toLeftOf="@+id/iv_more_notice"
+        android:persistentDrawingCache="animation" />
+
+    <ImageView
+        android:id="@+id/iv_more_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_more_black" />
+
+</RelativeLayout>

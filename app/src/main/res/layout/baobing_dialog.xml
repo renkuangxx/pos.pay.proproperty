@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:background="@drawable/bg_baobing_bac"
+    android:layout_height="wrap_content">
+  <ImageView
+      android:id="@+id/icon"
+      android:layout_width="@dimen/dime_42dp"
+      android:layout_height="42dp"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="@dimen/dp_22"
+      android:background="@mipmap/icon_title_nike"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="已获得1次博饼机会"
+    android:textSize="@dimen/dime_18sp"
+    android:textColor="#333333"
+    android:layout_below="@+id/icon"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/dp_22"
+    android:id="@+id/title"/>
+    <LinearLayout
+        android:layout_below="@+id/title"
+        android:layout_marginTop="26dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_40dp"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_2_act"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="返回博饼活动"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="@dimen/dime_5dp"
+            android:background="@drawable/bg_baobing"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/tv_stay"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="留在当前页面"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/dime_20dp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:background="@drawable/bg_baobing"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

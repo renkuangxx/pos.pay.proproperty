@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jingpai.pos">
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- HTTP权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Required -->
+    <permission
+        android:name="com.jingpai.pos.customer.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- Required -->
+    <uses-permission android:name="com.jingpai.pos.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--高德网络定位需要-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!--A-GPS 模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+
+
+    <application
+        android:name="com.jingpai.pos.customer.base.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="${app_label}"
+        tools:replace="android:label,android:allowBackup,android:networkSecurityConfig"
+        android:networkSecurityConfig="@xml/network_securuty_config"
+
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name="com.jingpai.pos.customer.activity.TemperatureAlarmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.payphone.PayPhoneFeeHisActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.NoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.housemember.MemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.payment.CheckOutActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.payment.PropertySearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.AnnouncementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.activity.login.SelectVillageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.community.VisitorSelectCommunityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.CarManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.ShowActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 程序入口 -->
+        <activity
+            android:name="com.jingpai.pos.activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="jphl"
+                    android:path="/app"
+                    android:scheme="citylife" />
+                <!-- 下面这几行也必须得设置 -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.CarAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.login.ForgerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.ShowImgActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.housemember.MemberManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.housemember.MemberEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.BackResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.activity.login.PersonalCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.My.NickNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.housemember.BuildingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.My.VisitorActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.repairs.TheMatterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.repairs.MatterHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.payment.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.payment.PayHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.payment.PayDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.web.CityLifeWebViewActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.My.PlusImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.repairs.MatterDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.My.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.housemember.HouseMember"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.My.NewNumberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.healthcheck.AntiepidemicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.show.Home.DailyRegistrationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.healthcheck.DailyParticularsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.PhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.census.activity.FirstCensusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.census.activity.HistoryInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.census.activity.OwnerInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jingpai.pos.customer.activity.census.activity.ThirdStepInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.census.activity.LastStepInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.jingpai.pos.customer.activity.census.activity.SecondStepInfoActivity" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.census.siderbar.SilderBarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.census.siderbar.SideBarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.invite.Invite2RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.invite.ExamineInviteRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.housemember.HouseHolderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.housemember.HouseHistoryInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.LifeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.fragment.LifeSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.HuxingListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.authentication.activity.MyHouseDefaultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.authentication.activity.YezhuRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.authentication.activity.SelectIdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.CitySelect.CityPickerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.authentication.activity.YezhuRegisterSearchLoudongActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.authentication.activity.YezhuRegisterSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.authentication.activity.YezhuRegisterSearchDanyuanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.authentication.activity.YezhuRegisterSearchFangwuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.jingpai.pos.customer.activity.fixcustomize.FixCustomizeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.jingpai.pos.customer.activity.authentication.activity.YezhuDetailActivity" />
+        <activity android:name="com.jingpai.pos.customer.activity.authentication.activity.YezhuSuccessActivity" />
+        <activity
+            android:name="com.jingpai.pos.customer.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.jingpai.pos" />
+        <activity android:name="com.jingpai.pos.customer.activity.qrcode.ScanCodeActivity" />
+        <activity
+            android:name="com.alipay.sdk.app.AlipayResultActivity"
+            tools:node="merge">
+            <intent-filter tools:node="replace">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="jingpaipay" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.ums.synthpayplugin.SynthPayPluginActivity" />
+
+<!--        <provider-->
+<!--            android:name="androidx.core.content.FileProvider"-->
+<!--            android:authorities="com.jingpai.pos.customer.fileprovider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/provider_path" />-->
+<!--        </provider>-->
+
+        <service android:name="com.jingpai.pos.customer.utils.DownloadIntentService" />
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="${JPUSH_CHANNEL}" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="${JPUSH_APPKEY}" />
+    </application>
+
+</manifest>

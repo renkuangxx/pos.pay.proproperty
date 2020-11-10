@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:orientation="vertical"
+    android:background="@color/main"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_26dp"
+        android:background="@mipmap/ic_shadow"/>
+    <RelativeLayout
+        android:id="@+id/rl_manager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_27dp"
+        android:layout_marginLeft="@dimen/dime_14dp"
+        android:layout_marginRight="@dimen/dime_14dp">
+
+        <ImageView
+            android:id="@+id/iv_ecohomelogo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_ecohomelogo" />
+
+<!--        android:drawableRight="@drawable/arrow_down"-->
+
+        <ImageView
+            android:id="@+id/iv_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:background="@mipmap/ic_chat" />
+
+        <ImageView
+            android:id="@+id/iv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dime_10dp"
+            android:layout_toLeftOf="@+id/iv_chat"
+            android:background="@mipmap/ic_mobile"
+            android:scaleType="fitXY" />
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dime_10dp"
+            android:layout_toLeftOf="@+id/iv_mobile"
+            android:scaleType="fitXY"
+            android:background="@mipmap/ic_phone" />
+        <TextView
+            android:id="@+id/tv_manager_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:text="您的管家"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/dime_10dp"
+            android:textSize="@dimen/dime_12sp"
+            android:layout_toLeftOf="@+id/iv_phone" />
+        <ImageView
+            android:id="@+id/iv_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dime_2dp"
+            android:layout_toLeftOf="@+id/tv_manager_name"
+            android:layout_marginRight="@dimen/dime_5dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_manager" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_60dp"
+            android:background="@color/gray_bg"
+            android:layout_alignBottom="@+id/rl_button"
+            android:layout_weight="1"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rl_button"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dime_16dp"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:background="@drawable/app_shape_solid_white_10radius"
+            android:paddingBottom="@dimen/dime_16dp"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smart_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_bg">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/shape_f1f1_radius18"
+                android:drawableLeft="@mipmap/ic_search"
+                android:drawablePadding="@dimen/dime_16dp"
+                android:paddingLeft="@dimen/dp_8"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:singleLine="true"
+                android:text="请输入关键词"
+                android:textColor="@color/text_97"
+                android:textSize="@dimen/dime_16sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--户型推荐-->
+                <com.xw.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="@dimen/dime_8dp"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/huxing_recommond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="您的户型推荐"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/huxing_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_title"
+                        android:layout_alignParentRight="true"
+                        android:drawableRight="@mipmap/go"
+                        android:drawablePadding="@dimen/dime_2dp"
+                        android:padding="@dimen/dp_4"
+                        android:text="更多"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_title"
+                        android:layout_marginTop="@dimen/dp_10" />
+                </RelativeLayout>
+                <!--设计师推荐-->
+                <RelativeLayout
+                    android:id="@+id/designer_recommond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_designer_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设计师推荐"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/designer_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_designer_title"
+                        android:layout_alignParentRight="true"
+                        android:drawableRight="@mipmap/go"
+                        android:drawablePadding="@dimen/dime_2dp"
+                        android:padding="@dimen/dp_4"
+                        android:text="更多"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_designer_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_designer_title"
+                        android:layout_marginTop="@dimen/dp_8" />
+                </RelativeLayout>
+                <!--风格-->
+                <RelativeLayout
+                    android:id="@+id/style_recommond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_style_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="风格"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawableRight="@mipmap/go"
+                        android:drawablePadding="@dimen/dime_2dp"
+                        android:padding="@dimen/dp_5"
+                        android:text="更多"
+                        android:textColor="#999999"
+                        android:textSize="7sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_style_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_style_title"
+                        android:layout_marginTop="@dimen/dp_8" />
+                </RelativeLayout>
+
+                <!--                空间-->
+                <RelativeLayout
+                    android:id="@+id/space_recommond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_space_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="空间"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_space_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_space_title"
+                        android:layout_alignParentRight="true"
+                        android:drawableRight="@mipmap/go"
+                        android:drawablePadding="@dimen/dime_2dp"
+                        android:padding="@dimen/dp_4"
+                        android:text="更多"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_space_title"
+                        android:background="@color/bg_grey"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/gray_bg"
+                            app:tabIndicatorColor="@color/main"
+                            app:tabIndicatorFullWidth="false"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMode="fixed"
+                            app:tabRippleColor="@android:color/transparent"
+                            app:tabSelectedTextColor="@color/main"
+                            app:tabTextAppearance="@style/TabLayoutTextStyle"
+                            app:tabTextColor="@color/help_view" />
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="421dp"
+                            android:background="@color/gray_bg" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/guide_recommond"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:layout_marginBottom="@dimen/dime_16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_guide_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="避坑指南"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_guide_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:drawableRight="@mipmap/go"
+                        android:drawablePadding="@dimen/dime_2dp"
+                        android:padding="@dimen/dp_5"
+                        android:text="更多"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_guide_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_guide_title"
+                        android:layout_marginTop="@dimen/dp_8" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_visibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_150"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="156dp"
+                        android:layout_height="134dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/vehiclemanagement_default" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_25"
+                        android:gravity="center"
+                        android:text="暂时没有数据"
+                        android:textColor="@color/text_97"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_foot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dime_16dp"
+                    android:gravity="center"
+                    android:text="-我也是有底线哒！-"
+                    android:textColor="#979797"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
+

@@ -1,0 +1,182 @@
+<resources>
+    <declare-styleable name="SwitchView">
+        <attr name="hasShadow" format="boolean" />
+        <attr name="primaryColor" format="color" />
+        <attr name="primaryColorDark" format="color" />
+        <attr name="offColor" format="color" />
+        <attr name="offColorDark" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="ratioAspect" format="float" />
+        <attr name="isOpened" format="boolean" />
+
+
+    </declare-styleable>
+    <declare-styleable name="QRCodeView">
+        <!-- 扫描框距离toolbar底部的距离，默认值为90dp -->
+        <attr name="qrcv_topOffset" format="dimension|reference" />
+        <!-- 扫描框边角线的宽度，默认值为3dp -->
+        <attr name="qrcv_cornerSize" format="dimension|reference" />
+        <!-- 扫描框边角线的长度，默认值为20dp -->
+        <attr name="qrcv_cornerLength" format="dimension|reference" />
+        <!-- 扫描框边角线的颜色，默认值为@android:color/white -->
+        <attr name="qrcv_cornerColor" format="color|reference" />
+        <!-- 扫描框边角线显示位置(相对于边框)，默认值为中间 -->
+        <attr name="qrcv_cornerDisplayType">
+            <enum name="center" value="1" />
+            <enum name="inside" value="2" />
+        </attr>
+        <!-- 扫描框的宽度，默认值为200dp -->
+        <attr name="qrcv_rectWidth" format="dimension|reference" />
+        <!-- 条码扫样式描框的高度，默认值为140dp -->
+        <attr name="qrcv_barcodeRectHeight" format="dimension|reference" />
+        <!-- 除去扫描框，其余部分阴影颜色，默认值为#33FFFFFF -->
+        <attr name="qrcv_maskColor" format="color|reference" />
+        <!-- 扫描线的宽度，默认值为1dp -->
+        <attr name="qrcv_scanLineSize" format="dimension|reference" />
+        <!-- 扫描线的颜色，默认值为@android:color/white -->
+        <attr name="qrcv_scanLineColor" format="color|reference" />
+        <!-- 扫描线距离上下或者左右边框的间距，默认值为0dp -->
+        <attr name="qrcv_scanLineMargin" format="dimension|reference" />
+        <!-- 是否显示默认的图片扫描线，默认值为false -->
+        <attr name="qrcv_isShowDefaultScanLineDrawable" format="boolean" />
+        <!-- 扫描线的图片资源，默认值为null -->
+        <attr name="qrcv_customScanLineDrawable" format="reference" />
+        <!-- 扫描边框的宽度，默认值为1dp -->
+        <attr name="qrcv_borderSize" format="dimension|reference" />
+        <!-- 扫描边框的颜色，默认值为@android:color/white -->
+        <attr name="qrcv_borderColor" format="color|reference" />
+        <!-- 扫描线从顶部移动到底部的动画时间，默认值为1000 -->
+        <attr name="qrcv_animTime" format="integer" />
+        <!-- 扫描框中心点在屏幕垂直方向的比例，当设置此值时，会忽略 qrcv_topOffset -->
+        <attr name="qrcv_verticalBias" format="float" />
+        <!-- Toolbar的高度，当有设置qrcv_isCenterVertical属性时，通过该属性来修正有Toolbar时导致扫描框垂直居中的偏差，默认值为0dp -->
+        <attr name="qrcv_toolbarHeight" format="dimension|reference" />
+        <!-- 扫描框的样式是否为扫条形码样式，默认值为false -->
+        <attr name="qrcv_isBarcode" format="boolean" />
+        <!-- 扫描二维码时的提示文案，默认值为null -->
+        <attr name="qrcv_qrCodeTipText" format="string|reference" />
+        <!-- 扫描条码时的提示文案，默认值为null -->
+        <attr name="qrcv_barCodeTipText" format="string|reference" />
+        <!-- 提示文案字体大小，默认值为14sp -->
+        <attr name="qrcv_tipTextSize" format="dimension|reference" />
+        <!-- 提示文案颜色，默认值为@android:color/white -->
+        <attr name="qrcv_tipTextColor" format="color|reference" />
+        <!-- 提示文案是否在扫描框的底部，默认值为false -->
+        <attr name="qrcv_isTipTextBelowRect" format="boolean" />
+        <!-- 提示文案与扫描框之间的间距，默认值为20dp -->
+        <attr name="qrcv_tipTextMargin" format="dimension|reference" />
+        <!-- 是否把提示文案作为单行显示，默认值为false -->
+        <attr name="qrcv_isShowTipTextAsSingleLine" format="boolean" />
+        <!-- 是否显示提示文案的背景，默认值为false -->
+        <attr name="qrcv_isShowTipBackground" format="boolean" />
+        <!-- 提示文案的背景色，默认值为#22000000 -->
+        <attr name="qrcv_tipBackgroundColor" format="color|reference" />
+        <!-- 扫描线是否来回移动，默认值为true -->
+        <attr name="qrcv_isScanLineReverse" format="boolean" />
+        <!-- 是否显示默认的网格图片扫描线，默认值为false -->
+        <attr name="qrcv_isShowDefaultGridScanLineDrawable" format="boolean" />
+        <!-- 扫描线的网格图片资源，默认值为null -->
+        <attr name="qrcv_customGridScanLineDrawable" format="reference" />
+        <!-- 是否只识别扫描框中的码，默认值为false -->
+        <attr name="qrcv_isOnlyDecodeScanBoxArea" format="boolean" />
+        <!-- 是否显示定位点，默认值为false -->
+        <attr name="qrcv_isShowLocationPoint" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SportProgressView">
+        <attr name="startColor" format="reference|color" />
+        <attr name="endColor" format="reference|color" />
+        <attr name="emptyColor" format="reference|color" />
+        <attr name="stepTextSize" format="reference|dimension" />
+        <attr name="progressWidth" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberCodeView">
+        <attr name="codeTextColor" format="color|reference" />
+        <attr name="codeTextSize" format="reference|dimension" />
+        <attr name="frameSize" format="reference|dimension" />
+        <attr name="framePadding" format="reference|dimension" />
+        <attr name="codeLength" format="integer|reference" />
+        <attr name="frameDrawableId" format="reference" />
+        <attr name="normal" format="reference" />
+        <attr name="select" format="reference" />
+    </declare-styleable>
+
+    <!--自定义toolbar-->
+    <declare-styleable name="CustomToolBar">
+        <attr name="android:background" format="color" />
+        <!--    返回图标id    -->
+        <attr name="back_icon" format="reference" />
+        <!--        标题-->
+        <attr name="title" format="string" />
+        <!--        标题颜色-->
+        <attr name="title_color" format="color" />
+        <!--title字体大小-->
+        <attr name="title_text_size" format="dimension" />
+        <!--        右侧标题-->
+        <attr name="right_title" format="string" />
+        <!--        右侧标题颜色-->
+        <attr name="right_title_color" format="color" />
+        <!--        右侧标题字体大小-->
+        <attr name="right_title_text_size" format="dimension" />
+    </declare-styleable>
+
+    <!--    民族    -->
+    <string-array name="date">
+        <item>汉族</item>
+        <item>蒙古族</item>
+        <item>回族</item>
+        <item>藏族</item>
+        <item>苗族</item>
+        <item>彝族</item>
+        <item>壮族</item>
+        <item>布依族</item>
+        <item>朝鲜族</item>
+        <item>满族</item>
+        <item>侗族</item>
+        <item>瑶族</item>
+        <item>白族</item>
+        <item>土家族</item>
+        <item>哈尼族</item>
+        <item>哈萨克族</item>
+        <item>傣族</item>
+        <item>黎族</item>
+        <item>僳僳族</item>
+        <item>佤族</item>
+        <item>畲族</item>
+        <item>高山族</item>
+        <item>拉祜族</item>
+        <item>水族</item>
+        <item>东乡族</item>
+        <item>纳西族</item>
+        <item>景颇族</item>
+        <item>柯尔克孜族</item>
+        <item>土族</item>
+        <item>达斡尔族</item>
+        <item>仫佬族</item>
+        <item>羌族</item>
+        <item>布朗族</item>
+        <item>撒拉族</item>
+        <item>毛南族</item>
+        <item>仡佬族</item>
+        <item>锡伯族</item>
+        <item>阿昌族</item>
+        <item>普米族</item>
+        <item>塔吉克族</item>
+        <item>怒族</item>
+        <item>乌孜别克族</item>
+        <item>俄罗斯族</item>
+        <item>鄂温克族</item>
+        <item>德昂族</item>
+        <item>保安族</item>
+        <item>裕固族</item>
+        <item>京族</item>
+        <item>塔塔尔族</item>
+        <item>独龙族</item>
+        <item>鄂伦春族</item>
+        <item>赫哲族</item>
+        <item>门巴族</item>
+        <item>珞巴族</item>
+        <item>基诺族</item>
+    </string-array>
+</resources>

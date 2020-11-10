@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:gravity="end"
+    tools:context=".activity.show.My.VisitDetailActivity">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="访客详情" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fffff3eb"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dime_24dp"
+                android:paddingTop="@dimen/dime_14dp"
+                android:paddingBottom="@dimen/dime_14dp">
+
+                <TextView
+                    android:id="@+id/tv_visit_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="车位待授权"
+                    android:textColor="#FF9C11"
+                    android:textSize="@dimen/dime_14sp" />
+
+                <TextView
+                    android:id="@+id/tv_visit_state_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dime_4dp"
+                    android:text="正在等待车位业主授权…"
+                    android:textColor="#99FF9C11"
+                    android:textSize="@dimen/dime_12sp" />
+            </LinearLayout>
+
+<!--            二维码部分-->
+            <include
+                android:visibility="gone"
+                android:id="@+id/vs_qrCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dime_16dp"
+                android:layout_marginTop="@dimen/dime_8dp"
+                android:layout_marginEnd="@dimen/dime_16dp"
+                android:layout_marginBottom="@dimen/dime_8dp"
+                layout="@layout/visitor_qr_code"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dime_8dp"
+                android:id="@+id/tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/text_f1f1f1"
+                android:paddingStart="@dimen/dime_16dp"
+                android:paddingTop="@dimen/dime_12dp"
+                android:paddingEnd="@dimen/dime_16dp"
+                android:paddingBottom="@dimen/dime_12dp"
+                android:text="登记有效期内，此邀请码用作访客出入小区门禁；访客车辆登记、访车停车授权成功后，自动车牌识别进场。"
+                android:textColor="@color/text_97"
+                android:textSize="@dimen/dime_14sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    授权部分-->
+    <include
+        android:visibility="gone"
+        android:id="@+id/vs_visit_auth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/visit_auth" />
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_no_data"
+        android:layout_marginTop="80dp"
+        android:layout_width="@dimen/dime_160dp"
+        android:layout_height="@dimen/dime_160dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/pay_fee_no_data" />
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您还还没有充值记录哦~"
+        android:textSize="@dimen/dime_16sp"
+        android:textColor="@color/text_97"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dime_24dp"
+        />
+</LinearLayout>

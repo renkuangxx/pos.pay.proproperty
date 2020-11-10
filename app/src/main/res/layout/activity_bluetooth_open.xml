@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:right_title="设置"
+        app:title="蓝牙开门"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_open_door"
+        android:layout_width="@dimen/dime_180dp"
+        android:layout_height="@dimen/dime_180dp"
+        android:layout_marginTop="74dp"
+        android:background="@mipmap/bluetooth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bluetooth"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_35"
+        android:text="请靠近需要开启的通闸或门禁"
+        android:textColor="#979797"
+        android:textSize="@dimen/dime_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_open_door"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:id="@+id/rl_setting"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dime_36dp"
+        android:layout_marginRight="@dimen/dime_36dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dime_38dp"
+        android:background="@drawable/shape_f7f7f7_corner_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tips"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否开启一键开门？"
+            android:textColor="#222222"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:textSize="@dimen/dime_14sp"/>
+        <TextView
+            android:id="@+id/tv_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启后进入app就可直接打开附近的门"
+            android:layout_below="@+id/tv_title1"
+            android:layout_alignLeft="@+id/tv_title1"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textSize="12sp"
+            android:textColor="#979797"
+            android:layout_marginBottom="@dimen/dime_12dp"/>
+        <TextView
+            android:id="@+id/tv_set_open_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="去开启"
+            android:textColor="#FF8A49"
+            android:textSize="@dimen/dime_12sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/bg_householder"
+            android:paddingLeft="9dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="9dp"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@mipmap/bg_bluethooth"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

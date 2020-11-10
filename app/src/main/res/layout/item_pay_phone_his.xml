@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="@dimen/dime_16dp"
+    android:paddingTop="@dimen/dime_16dp">
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/dime_38dp"
+        android:layout_height="@dimen/dime_38dp"
+        android:src="@mipmap/cashier_topup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fee_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dime_16dp"
+        android:text="手机充值"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/dime_16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_phone_num"
+        app:layout_constraintLeft_toRightOf="@+id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dime_16dp"
+        android:layout_marginTop="@dimen/dime_4dp"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/dime_14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_fee_date"
+        app:layout_constraintLeft_toRightOf="@+id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fee_tip"
+        tools:text="15888889876" />
+
+    <TextView
+        android:id="@+id/tv_fee_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dime_16dp"
+        android:layout_marginTop="@dimen/dime_4dp"
+        android:textColor="@color/text_97"
+        android:textSize="@dimen/dime_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone_num"
+        tools:text="2020-01-12 14:00:00" />
+
+    <LinearLayout
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="@dimen/dime_16dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_pay_face_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/dime_18sp"
+            tools:text="50" />
+
+        <TextView
+            android:id="@+id/tv_pay_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/sp_12"
+            tools:text="充值失败" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dime_16dp"
+        android:background="@color/line_color"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fee_date" />
+</androidx.constraintlayout.widget.ConstraintLayout>

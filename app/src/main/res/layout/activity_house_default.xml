@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@mipmap/house_default"/>
+
+    <TextView
+        android:id="@+id/tv_yip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_pic"
+        android:maxLines="2"
+        android:text="此功能需要关联房屋后才能使用\n                 请立即业主认证"
+        android:textColor="#979797"
+        android:layout_marginTop="@dimen/dp_24"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_below="@+id/tv_yip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_marginTop="@dimen/dime_42dp"
+        android:layout_marginRight="@dimen/dime_16dp"
+        android:background="@drawable/button_login_shapes"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="立即前往"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dime_16sp" />
+</RelativeLayout>
+

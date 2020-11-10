@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".activity.community.SelectVillageActivity">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:title="选择小区"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="当前小区"
+            android:layout_marginTop="@dimen/dime_16dp"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:textColor="#ff979797"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/iv_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/dinwei"/>
+
+            <TextView
+                android:id="@+id/tv_present"
+                android:layout_toRightOf="@+id/iv_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:text="南京怡化中心"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:textColor="#ff222222"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:id="@+id/tv_dinwei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重新定位"
+                android:padding="@dimen/dp_2"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="#3985FF"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginRight="@dimen/dime_16dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#F0F0F0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="其他小区"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:textColor="#ff979797"
+        android:textSize="14sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_estate"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

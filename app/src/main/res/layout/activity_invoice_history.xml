@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_bg"
+    android:orientation="vertical">
+
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/toolbar"
+        app:title="开票记录"
+        app:title_color="@color/title_text_color" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_pay_history"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pay_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+                android:layout_marginRight="@dimen/dp_18"
+                android:layout_marginLeft="@dimen/dime_14dp"
+                android:layout_marginTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_8"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <LinearLayout
+            android:id="@+id/ll_no_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_below="@+id/toolbar"
+            android:visibility="gone">
+
+        <ImageView
+                android:id="@+id/iv_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_invoice"
+                android:layout_marginTop="@dimen/dp_150"/>
+
+        <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="@string/no_invoice_records_tip"
+                android:textColor="@color/text_97"
+                android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+</RelativeLayout>

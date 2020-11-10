@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="@dimen/dime_17dp"
+        android:text="郭秀兰"
+        android:textColor="#212121"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/iv_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_marginLeft="@dimen/dime_8dp"
+        android:layout_toRightOf="@+id/tv_name"
+        android:background="@mipmap/nv"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_marginLeft="@dimen/dime_8dp"
+        android:layout_toRightOf="@+id/tv_name"
+        android:text="业主"
+        android:textColor="#979797"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_name"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/iv_jiantou"
+        android:text="提交成功"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_census_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_marginTop="@dimen/dime_8dp"
+        android:text="禾缘社区第三次人口普查"
+        android:textColor="#404040"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_status"
+        android:layout_alignRight="@+id/tv_status"
+        android:layout_marginTop="@dimen/dime_8dp"
+        android:layout_marginBottom="14dp"
+        android:text="2020-04-11"
+        android:textColor="#404040"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_jiantou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dime_16dp"
+        android:background="@mipmap/chevron"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

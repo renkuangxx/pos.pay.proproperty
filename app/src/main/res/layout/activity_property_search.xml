@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_bg"
+    android:id="@+id/rl_main"
+    android:orientation="vertical">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/toolbar"
+        app:title="@string/property_search_title"
+        app:back_icon="@drawable/ic_back_white"
+        app:title_color="@color/black"
+        app:right_title="缴费记录"
+        app:right_title_color="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dime_8dp"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_marginRight="@dimen/dime_16dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:background="@drawable/app_shape_solid_white_10radius">
+        <LinearLayout
+            android:id="@+id/ll_require"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="查询条件"
+                android:textColor="@color/text_33"
+                android:textSize="@dimen/dime_14sp"/>
+            <TextView
+                android:id="@+id/tv_require_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableRight="@mipmap/chevron"
+                android:drawablePadding="@dimen/dime_12dp"
+                android:text="按资源/手机号查询"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/dime_14sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view_require"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_1dp"
+            android:layout_marginLeft="@dimen/dime_12dp"
+            android:layout_marginRight="@dimen/dime_12dp"
+            android:background="#F1F3F6" />
+        <LinearLayout
+            android:id="@+id/ll_resource"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择资源"
+                android:textColor="@color/text_33"
+                android:textSize="@dimen/dime_14sp"/>
+            <TextView
+                android:id="@+id/tv_resource_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableRight="@mipmap/chevron"
+                android:drawablePadding="@dimen/dime_12dp"
+                android:text="请选择对应资源"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/dime_14sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view_build"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_1dp"
+            android:layout_marginLeft="@dimen/dime_12dp"
+            android:layout_marginRight="@dimen/dime_12dp"
+            android:visibility="gone"
+            android:background="#F1F3F6" />
+        <LinearLayout
+            android:id="@+id/ll_build"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择楼栋"
+                android:textColor="@color/text_33"
+                android:textSize="@dimen/dime_14sp"/>
+            <TextView
+                android:id="@+id/tv_build_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableRight="@mipmap/chevron"
+                android:drawablePadding="@dimen/dime_12dp"
+                android:text="请选择对应楼栋号"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/dime_14sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view_unit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_1dp"
+            android:layout_marginLeft="@dimen/dime_12dp"
+            android:layout_marginRight="@dimen/dime_12dp"
+            android:visibility="gone"
+            android:background="#F1F3F6" />
+        <LinearLayout
+            android:id="@+id/ll_unit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择单元"
+                android:textColor="@color/text_33"
+                android:textSize="@dimen/dime_14sp"/>
+            <TextView
+                android:id="@+id/tv_unit_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableRight="@mipmap/chevron"
+                android:drawablePadding="@dimen/dime_12dp"
+                android:text="请选择对应单元号"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/dime_14sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_1dp"
+            android:layout_marginLeft="@dimen/dime_12dp"
+            android:layout_marginRight="@dimen/dime_12dp"
+            android:visibility="gone"
+            android:background="#F1F3F6" />
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="手 机 号"
+                android:textColor="@color/text_33"
+                android:textSize="@dimen/dime_14sp"/>
+            <EditText
+                android:id="@+id/et_phone_select"
+                android:layout_width="@dimen/dime_150dp"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:hint="请输入手机号"
+                android:inputType="number"
+                android:background="@color/translucent"
+                android:maxLength="11"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/dime_14sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view_room"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_1dp"
+            android:layout_marginLeft="@dimen/dime_12dp"
+            android:layout_marginRight="@dimen/dime_12dp"
+            android:visibility="gone"
+            android:background="#F1F3F6" />
+        <LinearLayout
+            android:id="@+id/ll_room"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择房间"
+                android:textColor="@color/text_33"
+                android:textSize="@dimen/dime_14sp"/>
+            <TextView
+                android:id="@+id/tv_room_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableRight="@mipmap/chevron"
+                android:drawablePadding="@dimen/dime_12dp"
+                android:text="请选择对应房间号"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/dime_14sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view_parking"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_1dp"
+            android:layout_marginLeft="@dimen/dime_12dp"
+            android:layout_marginRight="@dimen/dime_12dp"
+            android:visibility="gone"
+            android:background="#F1F3F6" />
+        <LinearLayout
+            android:id="@+id/ll_parking"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择车位"
+                android:textColor="@color/text_33"
+                android:textSize="@dimen/dime_14sp"/>
+            <TextView
+                android:id="@+id/tv_parking_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableRight="@mipmap/chevron"
+                android:drawablePadding="@dimen/dime_12dp"
+                android:text="请选择对应车位号"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/dime_14sp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view_shop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_1dp"
+            android:layout_marginLeft="@dimen/dime_12dp"
+            android:layout_marginRight="@dimen/dime_12dp"
+            android:visibility="gone"
+            android:background="#F1F3F6" />
+        <LinearLayout
+            android:id="@+id/ll_shop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_52dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="选择商铺"
+                android:textColor="@color/text_33"
+                android:textSize="@dimen/dime_14sp"/>
+            <TextView
+                android:id="@+id/tv_shop_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableRight="@mipmap/chevron"
+                android:drawablePadding="@dimen/dime_12dp"
+                android:text="请选择对应商铺号"
+                android:textColor="@color/text_66"
+                android:textSize="@dimen/dime_14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_me"
+        android:layout_width="@dimen/dime_58dp"
+        android:layout_height="@dimen/dime_58dp"
+        android:background="@mipmap/icon_gotome"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/dp_150"
+        android:layout_marginRight="@dimen/dime_16dp"/>
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_48dp"
+        android:gravity="center"
+        android:background="@drawable/app_shape_solid_ff8a49_6radius"
+        android:text="查询"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dime_52dp"
+        android:layout_marginLeft="@dimen/dime_22dp"
+        android:layout_marginRight="@dimen/dime_22dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</RelativeLayout>

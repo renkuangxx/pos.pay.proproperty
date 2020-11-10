@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:title="修改用户名"
+        app:right_title="保存"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_nickName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dime_16dp"
+            android:layout_marginRight="@dimen/dime_20dp"
+            android:layout_weight="9"
+            android:background="#00FFFCFC"
+            android:cursorVisible="false"
+            android:textCursorDrawable="@drawable/color"
+            android:textSize="@dimen/dime_14sp" />
+
+        <ImageView
+            android:id="@+id/empty"
+            android:layout_width="@dimen/dime_20dp"
+            android:layout_height="@dimen/dime_20dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_delete"/>
+
+    </LinearLayout>
+
+</LinearLayout>

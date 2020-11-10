@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_home"
+        android:background="@color/gray_bg"
+        android:orientation="vertical">
+        <include layout="@layout/include_home_top"/>
+        <com.jingpai.pos.customer.views.JudgeNestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_title"
+            android:scrollbars="none"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="@color/gray_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <include layout="@layout/include_home_top_second"/>
+                <!-- 小区公告 -->
+                <include layout="@layout/include_notice"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_function"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:background="@drawable/app_shape_solid_white_10radius"
+                    android:paddingLeft="@dimen/dime_16dp"
+                    android:paddingTop="@dimen/dime_5dp"
+                    android:paddingBottom="@dimen/dime_5dp" />
+
+                <com.stx.xhb.androidx.XBanner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="@dimen/dime_8dp"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    app:isAutoPlay="true"
+                    app:AutoPlayTime="3000"
+                    app:pointsVisibility="true"
+                    app:pointsPosition="CENTER"
+                    app:pointContainerPosition="BOTTOM"
+                    app:pointsContainerBackground="#00aaaaaa"
+                    app:pointNormal="@drawable/app_shape_point_normal"
+                    app:pointSelect="@drawable/app_shape_point_selected"
+                    app:tipTextSize="12sp"
+                    app:isShowNumberIndicator="false"
+                    app:isShowIndicatorOnlyOne="false"
+                    app:pageChangeDuration="800"
+                    />
+                <!-- 消息 -->
+                <include layout="@layout/include_jpmessage"/>
+
+                <include layout="@layout/include_home_community"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="@dimen/dime_8dp"
+                    android:layout_marginRight="@dimen/dime_16dp"/>
+
+                <include layout="@layout/include_hot_activity"
+                    android:id="@+id/ll_hot_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="@dimen/dime_16dp"
+                    android:layout_marginRight="@dimen/dime_16dp"/>
+
+                <include layout="@layout/include_favorite"
+                    android:id="@+id/ll_favorite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="@dimen/dime_16dp"
+                    android:layout_marginRight="@dimen/dime_16dp" />
+
+                <ImageView
+                    android:id="@+id/iv_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dime_44dp"
+                    android:layout_marginBottom="@dimen/dime_13dp"
+                    android:layout_marginTop="@dimen/dime_16dp"
+                    android:visibility="gone"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </com.jingpai.pos.customer.views.JudgeNestedScrollView>
+        <LinearLayout
+            android:id="@+id/ll_tab_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_below="@+id/ll_title"
+            android:background="@color/main">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_favorite_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dime_30dp"
+                android:paddingBottom="@dimen/dp_2"
+                android:layout_marginLeft="@dimen/dime_16dp"
+                android:layout_marginRight="@dimen/dime_16dp"
+                android:background="@color/main"
+                app:tabMode="fixed"
+                app:tabIndicatorHeight="2dp"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/white"
+                app:tabIndicatorFullWidth="false"
+                app:tabRippleColor="@android:color/transparent"
+                app:tabTextAppearance="@style/FavoriteTabLayoutTextStyle"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <ImageView
+        android:id="@+id/iv_aiui"
+        android:layout_width="@dimen/dime_60dp"
+        android:layout_height="@dimen/dime_60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/dp_90"
+        android:layout_marginRight="@dimen/dime_16dp"
+        android:visibility="gone"
+        android:background="@mipmap/icon_aiui_logo"/>
+</RelativeLayout>
+
+

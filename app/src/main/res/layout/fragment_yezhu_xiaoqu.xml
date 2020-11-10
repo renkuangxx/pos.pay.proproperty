@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.show.My.VisitChoseHouseActivity">
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="选择小区" />
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dime_8dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_f1f1_radius18"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="@dimen/dime_16dp"
+            android:hint="输入查找内容"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_16sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp"
+            android:text="取消"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_16sp" />
+
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/ll_search"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_1dp"
+        android:background="#F0F0F0"
+        android:visibility="visible" />
+    <TextView
+    android:layout_below="@+id/view"
+    android:id="@+id/tv_my_tip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/text_f1f1f1"
+    android:paddingStart="@dimen/dime_16dp"
+    android:paddingTop="@dimen/dime_8dp"
+    android:paddingBottom="@dimen/dime_8dp"
+    android:textColor="@color/text_97"
+    android:textSize="@dimen/dime_14sp"
+    android:visibility="gone"
+    tools:text="搜索结果" />
+
+    <TextView
+        android:layout_below="@id/tv_my_tip"
+        android:id="@+id/tv_xiaoqu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_8"
+        android:textColor="#222222"
+        android:text="源昌新天地"
+        android:drawablePadding="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dime_8dp"
+        android:visibility="gone"
+        android:drawableLeft="@mipmap/icon_dinwei"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:id="@+id/rl_dinwei">
+        <TextView
+            android:id="@+id/tv_dinwei_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:text="当前城市"
+            android:textColor="#979797"
+            android:textSize="@dimen/sp_14"/>
+        <TextView
+            android:layout_below="@id/tv_dinwei_title"
+            android:id="@+id/tv_dinwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8"
+            android:textColor="#222222"
+            android:text="请选择城市"
+            android:drawablePadding="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dime_8dp"
+            android:drawableLeft="@mipmap/dinwei"/>
+        <TextView
+            android:id="@+id/tv_refresh_dinwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="切换城市"
+            android:padding="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_8"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#3985FF"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/tv_dinwei"/>
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/tv_dinwei"
+        android:id="@+id/underline_only_child"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_8dp"
+        android:background="#F0F0F0"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_below="@+id/underline_only_child"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="所有小区"
+        android:textColor="#979797"
+        android:textSize="@dimen/sp_14" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/tv_title"
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_search"/>
+    <LinearLayout
+        android:layout_below="@+id/tv_title"
+        android:id="@+id/ll_visibility"
+        app:layout_constraintTop_toBottomOf="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="148dp"
+            android:layout_height="134dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/vehiclemanagement_default" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:gravity="center"
+            android:text="暂时没有数据"
+            android:textColor="@color/text_97"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/fl_search_content1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

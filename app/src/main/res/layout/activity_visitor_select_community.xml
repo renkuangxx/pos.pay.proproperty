@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/ll_main"
+    android:orientation="vertical">
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="选择小区" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_42dp"
+        android:background="@color/gray_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/dime_17dp"
+            android:layout_height="@dimen/dime_20dp"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:background="@mipmap/ic_location"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="离您最近的小区"
+            android:textColor="@color/grey_font"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginLeft="@dimen/dime_7dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_nearest"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_42dp"
+        android:includeFontPadding="false"
+        android:text="无法获取定位信息，请开启定位服务"
+        android:paddingLeft="@dimen/dime_16dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_42dp"
+        android:includeFontPadding="false"
+        android:text="选择其他城市的小区"
+        android:paddingLeft="@dimen/dime_16dp"
+        android:gravity="center_vertical"
+        android:background="@color/gray_bg"
+        android:textColor="@color/grey_font"
+        android:textSize="@dimen/sp_16"/>
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/et_search"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dime_16dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="@dimen/dime_16dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_f1f1_radius18"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="@dimen/dime_16dp"
+            android:hint="搜索城市"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_16sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp"
+            android:text="取消"
+            android:visibility="gone"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_16sp" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lv_select_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+
+
+</LinearLayout>

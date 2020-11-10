@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_font"
+        android:layout_centerInParent="true"
+        android:layout_width="279dp"
+        android:background="@drawable/bg_life"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="@dimen/dime_36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢迎门口驿站"
+            android:textSize="17sp"
+            android:textColor="#222222"/>
+        <TextView
+            android:layout_marginTop="@dimen/dime_8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前身份：游客"
+            android:textSize="14sp"
+            android:textColor="#666666"/>
+        <TextView
+            android:layout_marginTop="@dimen/dime_16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="业主认证可享用更多的服务哦～"
+            android:textSize="14sp"
+            android:textColor="#555555"/>
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:layout_marginTop="@dimen/dime_32dp"
+            android:layout_marginRight="@dimen/dime_16dp"
+            android:background="@drawable/button_login_shapes"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:layout_marginBottom="@dimen/dime_32dp"
+            android:paddingBottom="7dp"
+            android:text="立即前往"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_16sp" />
+    </LinearLayout>
+
+<ImageView
+    android:layout_marginTop="54dp"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/ll_font"
+    android:id="@+id/iv_cancel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/closed"/>
+</RelativeLayout>

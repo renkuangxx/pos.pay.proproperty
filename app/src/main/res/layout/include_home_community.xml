@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_hometown_service"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_58dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/bg_hometown_top"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_home_life"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/dime_8dp"
+            android:text="小区家园"
+            android:textStyle="bold"
+            android:textColor="@drawable/selector_home_community"
+            android:textSize="@dimen/font_18sp"/>
+
+        <TextView
+            android:id="@+id/tv_community_serve"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dime_8dp"
+            android:layout_weight="1"
+            android:text="社区服务"
+            android:textStyle="bold"
+            android:textColor="@drawable/selector_home_community"
+            android:textSize="@dimen/font_18sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_shape_solid_white_10radius_bottom">
+        <include layout="@layout/include_hometown"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_community_sever"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/dime_16dp">
+            <RelativeLayout
+                android:id="@+id/rel2"
+                android:layout_width="match_parent"
+                android:layout_height="97dp"
+                android:layout_marginLeft="@dimen/dime_16dp"
+                android:layout_marginRight="@dimen/dime_16dp">
+                <ImageView
+                    android:id="@+id/iv_community_sever_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+                <TextView
+                    android:id="@+id/tv_community_sever_more"
+                    android:layout_width="@dimen/dime_16dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dime_12dp"
+                    android:includeFontPadding="false"
+                    android:background="@mipmap/ic_check_more"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_community_sever"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rel2"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view"
+                android:layout_marginTop="@dimen/dime_7dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

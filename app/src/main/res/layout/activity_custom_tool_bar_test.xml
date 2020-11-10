@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomToolBarTestActivity">
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/custom_tool_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="我是标题"
+        app:right_title="我是右侧标题"
+        />
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_marginTop="20dp"
+        android:id="@+id/custom_tool_bar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_tool_bar"
+        app:title="我是标题"
+        app:right_title="我是右侧标题"
+
+        />
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_marginTop="20dp"
+        android:id="@+id/custom_tool_bar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_tool_bar1"
+        app:back_icon="@mipmap/ic_back_arrow"
+        app:title="我是标题"
+        app:right_title_color="@color/colorPrimary"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

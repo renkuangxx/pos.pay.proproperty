@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_line"
+    android:orientation="vertical"
+
+    android:paddingTop="@dimen/dp_10">
+
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:title="@string/property_payment_detail_title"
+        app:title_color="@color/title_text_color" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_above="@+id/tv_invoice"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dime_14dp"
+                android:layout_marginTop="@dimen/dime_10dp"
+                android:layout_marginRight="@dimen/dp_18"
+                android:background="@drawable/shape_white_corner_5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="@dimen/dime_18dp"
+                    android:textColor="@color/text_97"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_date"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="@dimen/dp_23">
+
+                    <TextView
+                        android:id="@+id/tv_room_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="房号:  "
+                        android:textColor="@color/text_97"
+                        android:textSize="@dimen/dime_12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_room_no_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_room_no"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/dime_12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_park_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_room_no_name"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:layout_marginBottom="21dp"
+                        android:text="车位:  "
+                        android:textColor="@color/text_97"
+                        android:textSize="@dimen/dime_12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_park_no_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_room_no_name"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:layout_toRightOf="@+id/tv_park_no"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/dime_12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/tv_room_no_name"
+                        android:layout_alignBottom="@+id/tv_park_no_name"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/dp_18"
+                        android:gravity="center"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/dime_20sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_pay_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_bill"
+                android:layout_marginLeft="@dimen/dime_14dp"
+                android:layout_marginRight="@dimen/dp_18"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dp_8" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_invoice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_22"
+        android:background="#FF8A49"
+        android:gravity="center"
+        android:text="申请开票"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_promotion"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dp_5"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_community_activity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_200dp"
+            android:scaleType="fitXY" />
+        <ImageView
+            android:id="@+id/iv_meng"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_200dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:background="#66000000"/>
+        <ImageView
+            android:id="@+id/iv_end"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+
+<!--    <View-->
+<!--        android:id="@+id/takeview"-->
+<!--        android:layout_width="@dimen/dime_10dp"-->
+<!--        android:layout_height="match_parent"/>-->
+</LinearLayout>

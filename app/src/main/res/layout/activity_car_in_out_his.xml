@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_bg"
+    tools:context=".activity.show.Home.CarInOutHisActivity">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="出入记录"
+        />
+    <TextView
+        android:id="@+id/tv_plateNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="闽A9L765"
+        android:textSize="@dimen/dime_16sp"
+        android:textColor="@color/title_text_color"
+        android:paddingTop="@dimen/dime_16dp"
+        android:visibility="gone"
+        android:paddingStart="@dimen/dime_16dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+</LinearLayout>

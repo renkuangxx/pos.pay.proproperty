@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+        <TextView
+            android:id="@+id/tv_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_28dp"
+            android:layout_marginTop="@dimen/dime_4dp"
+            android:textSize="@dimen/text_size_12"
+            android:background="@drawable/app_shape_solid_0d000000_12radius"
+            android:textColor="@color/text_55"
+            android:paddingLeft="@dimen/dime_12dp"
+            android:paddingRight="@dimen/dime_12dp"
+            android:gravity="center_vertical"
+            android:text="pdf"
+            android:drawableLeft="@mipmap/icon_chevron_main"
+            android:drawablePadding="@dimen/dime_5dp"
+            />
+</LinearLayout>

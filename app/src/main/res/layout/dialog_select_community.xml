@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:maxHeight="300dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/rl_dialog">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_48dp"
+        android:background="@drawable/app_shape_oval_solid_f8f9fc_top_19radius">
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/main"
+            android:textSize="@dimen/font_22sp"
+            android:text="厦门"/>
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/dime_16dp"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:src="@mipmap/arrow_left_light"
+            />
+    </RelativeLayout>
+
+    <com.jingpai.pos.customer.views.MaxHeightRecyclerView
+        android:id="@+id/rl_community"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:scrollbars="none"
+         />
+
+</LinearLayout>

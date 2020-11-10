@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".activity.payphone.PayPhoneFeeResultActivity">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:title="结果页"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0" />
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="52dp"
+        android:src="@mipmap/waiting"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/pay_state"
+        android:layout_marginTop="@dimen/dime_19dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="支付成功"
+        android:textSize="@dimen/dime_20sp"
+        android:textColor="@color/title_text_color"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_marginTop="@dimen/dime_8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="话费充值中，预计10分钟到账，请关注到账通知"
+        android:textSize="@dimen/dime_14sp"
+        android:textColor="@color/text_97"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_back_addfee"
+        android:layout_marginTop="@dimen/dime_64dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回充值中心"
+        android:textSize="@dimen/dime_16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_login_shapes"
+        android:padding="@dimen/dime_13dp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/dime_16dp"
+        android:layout_marginEnd="@dimen/dime_16dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_back_home"
+        android:layout_marginTop="@dimen/dime_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="返回首页"
+        android:textSize="@dimen/dime_16sp"
+        android:textColor="@color/main"
+        android:background="@drawable/button_back"
+        android:padding="@dimen/dime_13dp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/dime_16dp"
+        android:layout_marginEnd="@dimen/dime_16dp"
+        />
+</LinearLayout>

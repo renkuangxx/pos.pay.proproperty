@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <View
+        android:id="@+id/takeview"
+        android:layout_width="@dimen/dime_16dp"
+        android:layout_height="match_parent"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="@dimen/dime_6dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/ll_promotion"
+            android:layout_width="241dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="108dp">
+
+                <ImageView
+                    android:id="@+id/iv_activity_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_activity1" />
+                <ImageView
+                    android:id="@+id/iv_meng"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    android:background="#66000000"/>
+                <ImageView
+                    android:id="@+id/iv_end"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/dime_16dp"
+                android:paddingLeft="@dimen/dime_16dp"
+                android:paddingBottom="@dimen/dime_8dp"
+                android:paddingTop="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/tv_activity_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_33"
+                    android:textSize="14sp"
+                    tools:text="" />
+                <LinearLayout
+                    android:id="@+id/ll_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_limit_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动截止："
+                    android:layout_marginTop="@dimen/dime_4dp"
+                    android:textSize="@dimen/sp_12"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dime_1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@color/color_f6"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_18">
+
+                    <TextView
+                        android:id="@+id/tv_enrollCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/text_ff3a3a"
+                        android:textSize="@dimen/text_size_10"
+                        tools:text="3" />
+
+                    <TextView
+                        android:id="@+id/tv_number_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人参加"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_enrollCount"
+                        android:textSize="@dimen/text_size_10"/>
+
+                    <TextView
+                        android:id="@+id/tv_activity_particulars"
+                        android:layout_width="52dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_border_fillet"
+                        android:gravity="center"
+                        android:text="去看看"
+                        android:textColor="@color/main"
+                        android:textSize="10sp"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

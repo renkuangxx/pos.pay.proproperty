@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="@dimen/dp_8" />
+            <solid android:color="@color/bg_check_out" />
+        </shape>
+    </item>
+
+    <item>
+        <bitmap
+            android:gravity="end"
+            android:src="@drawable/icon_delete"
+            />
+    </item>
+</layer-list>

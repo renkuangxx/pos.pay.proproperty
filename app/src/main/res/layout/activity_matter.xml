@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:title="@string/home_report"
+        app:right_title="报事历史"
+        />
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/rl_btn"
+        android:paddingTop="@dimen/dp_8"
+        android:background="@color/gray_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF">
+
+                <EditText
+                    android:id="@+id/et_problem_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="33dp"
+                    android:gravity="top"
+                    android:minHeight="@dimen/dp_20"
+                    android:background="#FFFFFF"
+                    android:hint="请尽可能详细的描述您遇到的问题"
+                    android:textColor="#ff979797"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dime_48dp"
+                    android:layout_marginLeft="@dimen/dime_16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dime_16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="9dp"
+                        android:layout_height="24dp"
+                        android:text="*"
+                        android:textColor="#ffe02020"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="64dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:text="房屋选择"
+                        android:textColor="#ff222222"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_house"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_my_house"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:text="请选择需要报事的房屋"
+                            android:textColor="#ff979797"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_nick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dime_16dp"
+                            android:src="@mipmap/chevron" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:padding="@dimen/dime_16dp"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dime_8dp"
+                    android:gravity="center_vertical"
+                    android:text="选择问题类型"
+                    android:textColor="#ff222222"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/problem_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="@dimen/dime_16dp">
+
+        <TextView
+            android:id="@+id/yes_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_login_shape"
+            android:gravity="center"
+            android:text="确认提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

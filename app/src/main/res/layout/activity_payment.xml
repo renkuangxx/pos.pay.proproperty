@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/fl_title"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@mipmap/bg"></RelativeLayout>
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:id="@+id/toolbar"
+        app:title="@string/property_payment_title"
+        app:back_icon="@drawable/ic_back_white"
+        app:title_color="@color/white"
+        app:right_title=""
+        app:right_title_color="@color/white" />
+
+
+    <LinearLayout
+            android:id="@+id/rl_house"
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginRight="@dimen/dime_16dp"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dime_16dp">
+        <ImageView
+                android:id="@+id/iv_multi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dime_16dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:background="@mipmap/pay_top"/>
+
+        <RelativeLayout
+                android:id="@+id/ll_room"
+                android:layout_width="match_parent"
+                android:layout_height="137dp"
+                android:background="@drawable/shape_white_corner_button">
+
+            <TextView
+                    android:id="@+id/tv_room_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/dime_20sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:text="悦君山"/>
+            <TextView
+                    android:id="@+id/tv_room_owner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_97"
+                    android:textSize="@dimen/dime_14sp"
+                    android:layout_below="@id/tv_room_name"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="业主:  "/>
+            <TextView
+                    android:id="@+id/tv_room_owner_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/dime_14sp"
+                    android:layout_below="@id/tv_room_name"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_toRightOf="@+id/tv_room_owner"/>
+
+            <TextView
+                    android:id="@+id/tv_room_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_97"
+                    android:textSize="@dimen/dime_14sp"
+                    android:layout_below="@id/tv_room_owner_name"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="房号:  "/>
+
+            <TextView
+                    android:id="@+id/tv_room_no_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_room_owner_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/tv_room_no"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/dime_14sp" />
+
+            <TextView
+                    android:id="@+id/tv_park_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_97"
+                    android:textSize="@dimen/dime_14sp"
+                    android:layout_below="@id/tv_room_no_name"
+                    android:layout_marginLeft="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="车位:  "/>
+            <TextView
+                    android:id="@+id/tv_park_no_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/dime_14sp"
+                    android:layout_below="@id/tv_room_no_name"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_toRightOf="@+id/tv_park_no"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/no_pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_house">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_bill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_bill"
+                android:paddingBottom="@dimen/dp_8"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_bill"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:padding="@dimen/dime_16dp">
+
+            <TextView
+                android:id="@+id/tv_money_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="金额合计："
+                android:textColor="@color/text_97"
+                android:textSize="@dimen/dime_14sp" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_money_label"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/dime_20sp" />
+
+            <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:background="@drawable/button_login_shape"
+                android:paddingLeft="@dimen/dp_30"
+                android:paddingRight="@dimen/dp_30"
+                android:text="@string/pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dime_16sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+            android:id="@+id/ll_no_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_80"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_below="@+id/rl_house"
+            android:visibility="gone">
+
+        <ImageView
+                android:id="@+id/iv_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_actingcapture_default" />
+
+        <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="@string/no_payment_tip"
+                android:textColor="@color/text_97"
+                android:textSize="@dimen/sp_16" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="公司简介" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="\u3000\u3000福州敦煌物业管理有限公司成立于2005年10月10日，注册地位于福建省福州市鼓楼区五凤街道凤仪社区软件大道28号水木菁华14#楼架空层，法定代表人为林远姑。经营范围包括物业管理、酒店管理、绿化养护、水电安装、家政服务。"/>
+
+
+</LinearLayout>

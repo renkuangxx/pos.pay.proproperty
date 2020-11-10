@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="操作结果"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dime_116dp"
+            android:layout_height="@dimen/dime_116dp"
+            android:layout_marginTop="71dp"
+            android:src="@drawable/ic_success"/>
+
+        <TextView
+            android:id="@+id/tv_succeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="9.5dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/dime_20sp"
+            android:text="添加成功"/>
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="19dp"
+            android:text="添加车牌和车可以在线缴费哦"/>
+
+        <TextView
+            android:id="@+id/result_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dime_16dp"
+            android:layout_marginTop="@dimen/dime_64dp"
+            android:layout_marginEnd="@dimen/dime_16dp"
+            android:layout_marginBottom="@dimen/dime_16dp"
+            android:background="@drawable/button_login_shape"
+            android:gravity="center"
+            android:text="返回列表页"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_16sp" />
+
+        <TextView
+            android:id="@+id/result_btn_show"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dime_16dp"
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dime_16dp"
+            android:layout_marginBottom="@dimen/dime_16dp"
+            android:background="@drawable/ic_tabunselected"
+            android:gravity="center"
+            android:text="返回首页"
+            android:textColor="#FF8A49"
+            android:visibility="gone"
+            android:textSize="@dimen/dime_16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dime_16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/top_bg"
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            android:background="@mipmap/update_banner" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/dime_16dp"
+            android:text="门口驿站更新啦！"
+            android:textColor="@color/title_text_color"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:layout_marginTop="@dimen/dime_16dp"
+
+            android:layout_marginRight="@dimen/dime_16dp"
+            android:lineSpacingExtra="@dimen/dime_30dp"
+            android:text="1.这里是更新内容1\n2.这里是更新内容，这里是更新内容，这里是更新内容2\n3.这里是更新内容3\n4.这里是更新内容4"
+            android:textColor="@color/text_55"
+            android:textSize="@dimen/dime_14sp" />
+
+        <TextView
+            android:id="@+id/tv_start_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:layout_marginTop="@dimen/dime_16dp"
+            android:layout_marginRight="@dimen/dime_16dp"
+            android:background="@drawable/button_login_shapes"
+            android:gravity="center"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:text="去更新"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_16sp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_update_close"
+        android:layout_width="@dimen/dime_36dp"
+        android:layout_height="@dimen/dime_36dp"
+        android:layout_marginTop="@dimen/dime_24dp"
+        android:src="@mipmap/dialog_closed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"
+        />
+</LinearLayout>

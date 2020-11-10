@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="服务建议" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/ll_submit"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+            <EditText
+                android:paddingTop="@dimen/dime_16dp"
+                android:id="@+id/et_problem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dime_32dp"
+                android:layout_marginRight="@dimen/dime_32dp"
+                android:background="#FFFFFF"
+                android:hint="请对我们的服务留下您宝贵的意见，帮助我们改进..."
+                android:textColor="#ff979797"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dime_32dp"
+                android:layout_marginTop="@dimen/dime_48dp"
+                android:layout_marginBottom="@dimen/dime_32dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="@dimen/dime_16dp">
+
+        <TextView
+            android:id="@+id/tv_serve_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_login_shape"
+            android:gravity="center"
+            android:text="确认提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_16sp" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

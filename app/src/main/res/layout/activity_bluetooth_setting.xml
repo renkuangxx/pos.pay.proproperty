@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.jingpai.pos.customer.views.CustomToolBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:title="蓝牙开门设置"
+    android:id="@+id/toolbar_bluetooth_setting"/>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一键开门"
+            android:textSize="17sp"
+            android:padding="@dimen/dime_14dp"
+            android:layout_marginLeft="2dp"
+            android:textColor="#222222"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启后进入app，可直接打开附近的通闸或门禁"
+            android:textSize="@dimen/dime_10sp"
+            android:textColor="#999999"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:paddingLeft="16dp"
+            android:paddingBottom="@dimen/dime_4dp"
+            android:paddingTop="@dimen/dime_4dp"
+            android:paddingRight="@dimen/dime_6dp"
+            android:background="@drawable/button_bluetooth_shape"/>
+        <ToggleButton
+                android:id="@+id/toggle_open_close"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_30"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_15"
+                android:background="@drawable/selector_toggle_drawable"
+                android:checked="false"
+                android:textOn="@null"
+                android:textOff="@null"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_font"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_life"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dime_36dp"
+            android:text="产权登记类型"
+            android:textColor="#222222"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="@dimen/dime_8dp"
+            android:layout_marginRight="@dimen/dp_30"
+            android:gravity="center"
+            android:text="这里的产权人登记只影响门口驿站app的房屋最高管理权限"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F0F0F0" />
+        <TextView
+            android:id="@+id/tv_wrong"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_44dp"
+            android:text="登记信息替换"
+            android:textColor="#FF8A49"
+            android:textSize="@dimen/dime_16sp"
+            android:gravity="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#F0F0F0" />
+        <TextView
+            android:id="@+id/tv_change"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dime_44dp"
+            android:text="房屋交易变更"
+            android:textColor="#FF8A49"
+            android:textSize="@dimen/dime_16sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

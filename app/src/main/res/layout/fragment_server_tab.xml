@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_bg">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabIndicatorHeight="0dp"
+        app:tabIndicatorColor="@color/main"
+        app:tabSelectedTextColor="@color/main"
+        app:tabTextColor="@color/title_text_color"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"/>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab"/>
+
+    <LinearLayout
+        android:id="@+id/ll_visibility"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="156dp"
+            android:layout_height="134dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/vehiclemanagement_default" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:gravity="center"
+            android:textColor="@color/text_97"
+            android:text="暂无数据哦～"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+</RelativeLayout>

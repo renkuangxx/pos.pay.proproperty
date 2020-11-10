@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/fy_bg"
+    android:orientation="vertical"
+    tools:context=".activity.show.Home.EpidemicZoneActivity">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:back_icon="@drawable/ic_back_white"
+        app:title="防疫专区"
+        app:title_color="@color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_day_health"
+        android:paddingTop="@dimen/dime_16dp"
+        android:paddingBottom="@dimen/dime_16dp"
+        android:paddingStart="@dimen/dime_24dp"
+        android:paddingEnd="@dimen/dime_22dp"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:layout_marginStart="@dimen/dime_16dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="@dimen/dime_16dp"
+        android:background="@drawable/shape_fy_bg_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="每日健康登记"
+            android:textSize="@dimen/dime_18sp"
+            android:shadowColor="#8c039875"
+            android:shadowDx="0.0"
+            android:shadowDy="2.0"
+            android:shadowRadius="3.0"
+            android:textColor="@color/white"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iv_right"
+            android:src="@mipmap/icon_fy_one"
+            android:layout_marginEnd="@dimen/dime_16dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:src="@mipmap/cion_right"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_community"
+        android:paddingTop="@dimen/dime_16dp"
+        android:paddingBottom="@dimen/dime_16dp"
+        android:paddingStart="@dimen/dime_24dp"
+        android:paddingEnd="@dimen/dime_22dp"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"
+        android:layout_marginStart="@dimen/dime_16dp"
+        android:layout_marginTop="@dimen/dime_16dp"
+        android:layout_marginEnd="@dimen/dime_16dp"
+        android:background="@drawable/shape_fy_bg_bottom"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="社区治理"
+            android:textSize="@dimen/dime_18sp"
+            android:shadowColor="#8c039875"
+            android:shadowDx="0.0"
+            android:shadowDy="2.0"
+            android:shadowRadius="3.0"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/iv_right2"
+            android:src="@mipmap/icon_fy_two"
+            android:layout_marginEnd="@dimen/dime_16dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            android:src="@mipmap/cion_right"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/dp_40"
+        android:textSize="@dimen/dime_12sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:text="厦门鲸牌互连科技有限责任公司荣誉出品"
+        />
+</LinearLayout>

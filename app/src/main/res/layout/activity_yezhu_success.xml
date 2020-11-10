@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:title="提交结果" />
+
+    <ImageView
+        android:id="@+id/iv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@mipmap/icon_success" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@+id/iv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="成功"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dime_19dp"
+        android:textColor="#212121"
+        android:textSize="@dimen/dime_20sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/title1"
+        android:layout_below="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="信息提交成功，前往房屋管理"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dime_19dp"
+        android:textColor="#979797"
+        android:textSize="@dimen/sp_14"/>
+    <TextView
+        android:id="@+id/title2"
+        android:layout_below="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看审核进度"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dime_5dp"
+        android:textColor="#979797"
+        android:textSize="@dimen/sp_14"/>
+    <TextView
+        android:id="@+id/tv_to_house"
+        android:layout_below="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/button_login_shape"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_marginRight="@dimen/dime_16dp"
+        android:text="前往房屋管理"
+        android:textSize="@dimen/dime_16sp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"/>
+    <TextView
+        android:id="@+id/tv_to_main"
+        android:layout_below="@+id/tv_to_house"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_2_main"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_marginRight="@dimen/dime_16dp"
+        android:text="返回首页"
+        android:textSize="@dimen/dime_16sp"
+        android:gravity="center"
+        android:textColor="#FF8A49"/>
+</RelativeLayout>

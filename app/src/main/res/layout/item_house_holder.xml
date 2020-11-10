@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_jump"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:paddingLeft="@dimen/dime_13dp"
+    android:paddingRight="@dimen/dp_15"
+    android:paddingBottom="@dimen/dime_13dp"
+    android:background="@drawable/bg_householder">
+
+    <TextView
+        android:id="@+id/tv_name1"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="wrap_content"
+        android:text="成员姓名"
+        android:includeFontPadding="false"
+        android:layout_marginTop="18dp"
+        android:textColor="#979797"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_name1"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="15dp"
+        android:includeFontPadding="false"
+        android:text=""
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#222222"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_room1"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name1"
+        android:layout_marginTop="13dp"
+        android:includeFontPadding="false"
+        android:text="房间号"
+        android:textColor="#FF979797"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_room1"
+        android:layout_toRightOf="@+id/tv_room1"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="15dp"
+        android:includeFontPadding="false"
+        android:text=""
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#FF222222"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_time1"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_room1"
+        android:layout_marginTop="@dimen/dime_13dp"
+        android:includeFontPadding="false"
+        android:text="申请时间"
+        android:textColor="#FF979797"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_time1"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/tv_time1"
+        android:layout_marginTop="13dp"
+        android:includeFontPadding="false"
+        android:text=""
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#FF242424"
+        android:textSize="@dimen/sp_14" />
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:drawableRight="@mipmap/chevron"
+        android:drawablePadding="11dp"
+        android:text=""
+        android:textColor="#FFF5A623"
+        android:textSize="@dimen/dime_14sp" />
+</RelativeLayout>

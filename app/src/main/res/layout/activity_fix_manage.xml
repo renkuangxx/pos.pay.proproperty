@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/bg_grey"
+        android:orientation="vertical">
+
+        <com.jingpai.pos.customer.views.CustomToolBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="环节管理"
+            android:id="@+id/toolbar"
+            />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart_refresh_layout"
+            android:layout_width="match_parent"
+            android:background="@color/bg_grey"
+            android:layout_below="@+id/toolbar"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dime_16dp"
+                    android:background="@drawable/app_shape_solid_white_10radius"
+                    android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_order_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dime_34dp"
+                            android:text="装修编号：#"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/dime_16dp"
+                            android:background="@drawable/app_shape_solid_979797_top10_radius"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/matter_history_view"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:layout_height="match_parent" />
+                </LinearLayout>
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_visibility"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_below="@+id/toolbar"
+            android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="156dp"
+                    android:layout_height="134dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="80dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/vehiclemanagement_default" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:gravity="center"
+                    android:textColor="@color/text_97"
+                    android:text="您还没有报事历史哦～"
+                    android:textSize="16dp" />
+
+        </LinearLayout>
+</RelativeLayout>

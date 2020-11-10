@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/ll_font"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="16dp"
+        android:background="@drawable/bg_life"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/icon_cha"
+            android:padding="@dimen/dime_10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用条件"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.订单金额大于50（含）；"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.积分数量大于1000个（含）；"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:layout_marginTop="@dimen/dp_5" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.积分支付不得超过每笔订单应付金额50%。"
+            android:textColor="#000000"
+            android:layout_marginTop="@dimen/dp_5"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="使用数量"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+        <TextView
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.使用积分数量为1000的整数倍；"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.1000积分抵扣10元。"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:layout_marginTop="@dimen/dp_5" />
+    </LinearLayout>
+
+</RelativeLayout>

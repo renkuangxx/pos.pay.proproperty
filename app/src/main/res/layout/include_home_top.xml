@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_5"
+    android:background="@color/main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dime_14dp"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_community_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            tools:text="南京"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_16sp"
+            android:drawableRight="@drawable/arrow_down" />
+        <TextView
+            android:id="@+id/tv_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_community_name"
+            android:layout_marginLeft="@dimen/dime_6dp"
+            tools:text="业主您好"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_10sp" />
+
+        <ImageView
+            android:id="@+id/iv_msg_tip"
+            android:layout_width="@dimen/dime_26dp"
+            android:layout_height="@dimen/dime_30dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/ic_bell" />
+        <ImageView
+            android:id="@+id/iv_qrcode"
+            android:layout_width="@dimen/dime_26dp"
+            android:layout_height="@dimen/dime_30dp"
+            android:layout_toLeftOf="@+id/iv_msg_tip"
+            android:layout_marginRight="@dimen/dime_7dp"
+            android:background="@mipmap/ic_qrcode" />
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/dime_26dp"
+            android:layout_height="@dimen/dime_30dp"
+            android:layout_toLeftOf="@+id/iv_qrcode"
+            android:layout_marginRight="@dimen/dime_7dp"
+            android:visibility="gone"
+            android:background="@mipmap/ic_search" />
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/dime_30dp"
+            android:layout_height="@dimen/dime_30dp"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:layout_marginRight="@dimen/dime_7dp"
+            android:background="@mipmap/ic_logo" />
+        <TextView
+            android:id="@+id/tv_msg_tip_count"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dime_3dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_red_message"/>
+    </RelativeLayout>
+</LinearLayout>

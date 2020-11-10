@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="车辆管理"
+        app:right_title="编辑"
+        />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/visibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="80dp"
+                        android:src="@mipmap/nocar" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dime_25sp"
+                        android:gravity="center"
+                        android:text="@string/cat_text"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/manage_add_car"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="@dimen/dime_16dp"
+                        android:layout_marginTop="@dimen/dime_65dp"
+                        android:layout_marginEnd="@dimen/dime_16dp"
+                        android:layout_marginBottom="@dimen/dime_16dp"
+                        android:background="@drawable/button_login_shape"
+                        android:gravity="center"
+                        android:text="@string/add_cat"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dime_16sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_car"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="@dimen/dime_16dp"
+                        android:layout_marginTop="@dimen/dime_8dp"
+                        android:text="家庭车辆（厦门宝嘉誉峰）"
+                        android:textColor="#ff979797"
+                        android:textSize="14sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/car_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_car" />
+
+                    <!--<TextView
+                        android:id="@+id/tv_stall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="@dimen/dime_16dp"
+                        android:layout_marginTop="@dimen/dime_8dp"
+                        android:text="家庭车位（厦门宝嘉誉峰）"
+                        android:textColor="#ff979797"
+                        android:textSize="14sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/car_stall_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />-->
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_stall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/r_layout"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_stall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="@dimen/dime_16dp"
+                        android:layout_marginTop="@dimen/dime_8dp"
+                        android:text="家庭车位（厦门宝嘉誉峰）"
+                        android:textColor="#ff979797"
+                        android:textSize="14sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/car_stall_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_stall" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/r_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dime_16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/add_cars"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/button_login_shape"
+            android:gravity="center"
+            android:text="添加车辆"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dime_16sp" />
+
+    </LinearLayout>
+</LinearLayout>
+

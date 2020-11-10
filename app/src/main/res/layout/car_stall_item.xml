@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_92dp"
+        android:layout_marginLeft="@dimen/dime_16dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dime_16dp"
+        android:background="@drawable/shape_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_stall_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dime_28dp"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:text="车牌号"
+            android:textColor="#000000"
+            android:textSize="@dimen/dime_20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_stall_owner_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:background="@drawable/shape_6689c1_2dp"
+            android:paddingStart="@dimen/dime_7dp"
+            android:paddingTop="@dimen/dime_2dp"
+            android:paddingEnd="@dimen/dime_7dp"
+            android:paddingBottom="@dimen/dime_2dp"
+            android:text="产权"
+            android:textSize="@dimen/dime_10sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_stall_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="@dimen/dime_32dp"
+                android:background="#F0F0F0" />
+
+            <TextView
+                android:id="@+id/car_stall_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_30"
+                android:gravity="right"
+                android:text="删除"
+                android:textColor="#6689C1"
+                android:textSize="@dimen/dime_14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

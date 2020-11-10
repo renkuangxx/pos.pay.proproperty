@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical"
+    tools:context=".activity.show.My.VisitChoseHouseActivity">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="搜索" />
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dime_8dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_f1f1_radius18"
+            android:drawableLeft="@mipmap/ic_search"
+            android:drawablePadding="@dimen/dime_16dp"
+            android:hint="输入查找内容"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_16sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dime_16dp"
+            android:paddingRight="@dimen/dime_16dp"
+            android:text="取消"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/ll_search"
+        android:id="@+id/tv_my_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_f1f1f1"
+        android:paddingStart="@dimen/dime_16dp"
+        android:paddingTop="@dimen/dime_8dp"
+        android:paddingBottom="@dimen/dime_8dp"
+        android:textColor="@color/text_97"
+        android:textSize="@dimen/dime_14sp"
+        android:visibility="gone"
+        tools:text="搜索结果" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/tv_my_tip"
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_search"/>
+
+</RelativeLayout>

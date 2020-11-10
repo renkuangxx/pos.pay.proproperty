@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jingpai.pos.customer.views.CustomToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:title="选择身份" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/line_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_xiaoqu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dime_36dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/dime_16dp"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_dinwei" />
+
+        <TextView
+            android:id="@+id/tv_present"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toRightOf="@+id/iv_pic"
+            android:text="南京怡化中心"
+            android:textColor="#222222"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rg_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_xiaoqu"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/cl_pay_fee">
+
+        <RadioButton
+            android:id="@+id/rb_zfb"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:button="@null"
+            android:checked="true"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/radio_button_choice_id"
+            android:drawablePadding="@dimen/dime_16dp"
+            android:gravity="left|center_vertical"
+            android:text="产权人"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rb_family"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:button="@null"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/radio_button_choice_id"
+            android:drawablePadding="@dimen/dime_16dp"
+            android:gravity="left|center_vertical"
+            android:text="产权家属"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rb_zuhu"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginRight="@dimen/dp_20"
+            android:button="@null"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/radio_button_choice_id"
+            android:drawablePadding="@dimen/dime_16dp"
+            android:gravity="left|center_vertical"
+            android:text="租户"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/line_color" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_confirm_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_id"
+        android:layout_marginLeft="@dimen/dime_32dp"
+        android:layout_marginTop="@dimen/dime_48dp"
+        android:layout_marginRight="@dimen/dime_32dp"
+        android:background="@drawable/button_login_shape"
+        android:gravity="center"
+        android:padding="@dimen/dime_13dp"
+        android:text="下一步"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

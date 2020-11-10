@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:background="@color/bg_grey"
+android:orientation="vertical">
+
+<com.jingpai.pos.customer.views.CustomToolBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:title="报事历史"
+    android:id="@+id/toolbar"
+    />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp_2">
+<!--    <com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+<!--        android:id="@+id/smart_refresh_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+        <!--                <android.support.design.widget.CoordinatorLayout-->
+        <!--                        android:id="@+id/coordinator"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:fitsSystemWindows="true">-->
+
+        <!--                    <android.support.design.widget.AppBarLayout-->
+        <!--                            android:id="@+id/appbar"-->
+        <!--                            android:layout_width="match_parent"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:fitsSystemWindows="true"-->
+        <!--                            app:elevation="0dp"-->
+        <!--                            app:theme="@style/AppTheme.AppBarOverlay">-->
+<!--                                <android.support.design.widget.TabLayout-->
+<!--                                        android:id="@+id/tab1"-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:background="@color/white"-->
+<!--                                        app:tabMode="scrollable"-->
+<!--                                        app:tabIndicatorHeight="0dp"-->
+<!--                                        app:tabTextAppearance="@style/TabLayoutTextStyle"/>-->
+        <!--                    </android.support.design.widget.AppBarLayout>-->
+        <!--                </android.support.design.widget.CoordinatorLayout>-->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+
+            app:tabMode="fixed"
+            app:tabIndicatorHeight="1dp"
+            app:tabIndicatorColor="@color/main"
+            app:tabSelectedTextColor="@color/main"
+            app:tabTextColor="@color/help_view"
+            app:tabIndicatorFullWidth="false"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+<!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+</LinearLayout>
+</LinearLayout>

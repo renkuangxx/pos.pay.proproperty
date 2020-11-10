@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dime_13dp"
+    android:layout_marginTop="@dimen/dime_6dp"
+    android:layout_marginRight="@dimen/dime_16dp"
+    android:background="@drawable/shape_white_corner_5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="32dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="@dimen/dime_16dp"
+                android:layout_marginTop="@dimen/dime_16dp"
+                android:text="设施"
+                android:textColor="#222222"
+                android:textSize="@dimen/sp_16" />
+
+            <LinearLayout
+                android:id="@+id/ll_dispose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dime_16dp"
+                android:layout_marginTop="@dimen/dime_16dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="待处理"
+                    android:textColor="#ffff9c11"
+                    android:drawableRight="@drawable/ic_system_moreb"
+                    android:drawablePadding="@dimen/dime_13dp"
+                    android:layout_marginRight="12dp"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="57dp"
+                android:layout_height="20dp"
+                android:text="问题描述"
+                android:layout_marginLeft="@dimen/dime_16dp"
+                android:layout_marginTop="@dimen/dime_16dp"
+                android:textColor="#ff979797"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_problem_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dime_14sp"
+                android:textColor="#222222"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/dime_16dp"
+                android:text="1栋2单元楼排水管爆了，大面积漏水"
+                android:layout_marginLeft="@dimen/dp_8"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="57dp"
+                android:layout_height="20dp"
+                android:text="申报时间"
+                android:layout_marginLeft="@dimen/dime_16dp"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textColor="#ff979797"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_matter_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dime_14sp"
+                android:textColor="#555555"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="2019年7月23日 13:00:23"
+                android:layout_marginLeft="@dimen/dp_8"/>
+
+        </LinearLayout>
+        <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/tv_urging"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_30"
+            android:text="催办"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:layout_marginRight="@dimen/dp_70"
+            android:textColor="@color/white"
+            android:background="@drawable/button_login_shape"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_30"
+            android:textSize="@dimen/dime_14sp"
+            android:textColor="@color/main"
+            android:gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:text="取消"
+            android:background="@drawable/button_shape_mian"
+            android:layout_marginLeft="@dimen/dp_8"/>
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_8">
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_30"
+                android:text="查看详情"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dime_16dp"
+                android:layout_marginRight="@dimen/dp_12"
+                android:textColor="@color/white"
+                android:background="@drawable/button_login_shape"
+                android:layout_alignParentRight="true"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

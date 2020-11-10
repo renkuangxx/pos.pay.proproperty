@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    >
+
+    <FrameLayout
+        android:id="@+id/FrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/gray_bg"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:minHeight="@dimen/dp_50"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dime_6dp"
+        android:paddingBottom="@dimen/dime_6dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/show_iv"
+                android:layout_width="@dimen/dime_32dp"
+                android:layout_height="@dimen/dime_32dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_home_p" />
+
+            <TextView
+                android:id="@+id/show_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#FF8A49"
+                android:visibility="gone"
+                android:textSize="@dimen/text_size_10"
+                android:text="首页"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/life"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/life_iv"
+                android:layout_width="@dimen/dime_24dp"
+                android:layout_height="@dimen/dime_24dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/community_off" />
+
+            <TextView
+                android:id="@+id/life_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#555555"
+                android:textSize="@dimen/text_size_10"
+                android:text="服务"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/discover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/discover_iv"
+                android:layout_width="@dimen/dime_24dp"
+                android:layout_height="@dimen/dime_24dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/community_np" />
+
+            <TextView
+                android:id="@+id/discover_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#555555"
+                android:textSize="@dimen/text_size_10"
+                android:text="商城"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/my"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/my_iv"
+                android:layout_width="@dimen/dime_24dp"
+                android:layout_height="@dimen/dime_24dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/mine_np" />
+
+            <TextView
+                android:id="@+id/my_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#555555"
+                android:textSize="@dimen/text_size_10"
+                android:text="我的"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

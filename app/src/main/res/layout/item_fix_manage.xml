@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingRight="@dimen/dime_16dp">
+    <LinearLayout
+        android:id="@+id/ll_right_main"
+        android:layout_width="@dimen/dime_34dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center_horizontal">
+        <View
+            android:layout_width="@dimen/dp_12"
+            android:layout_height="@dimen/dp_12"
+            android:background="@drawable/app_shape_oval_solid_ff8a49"/>
+        <View
+            android:layout_width="@dimen/dp_2"
+            android:layout_height="match_parent"
+            android:background="@color/main"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_right_grey"
+        android:layout_width="@dimen/dime_34dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <View
+            android:layout_width="@dimen/dp_12"
+            android:layout_height="@dimen/dp_12"
+            android:background="@drawable/app_shape_oval_solid_e5e5e5"/>
+        <View
+            android:layout_width="@dimen/dp_2"
+            android:layout_height="match_parent"
+            android:background="@color/text_e5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_24">
+            <TextView
+                android:id="@+id/tv_process_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title_text_color"
+                android:layout_centerVertical="true"
+                tools:text="方案确认"
+                android:textSize="@dimen/text_size_17"/>
+            <TextView
+                android:id="@+id/tv_process_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_55"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                tools:text="2020.05.20 13:14"
+                android:textSize="@dimen/text_size_12"/>
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_process"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

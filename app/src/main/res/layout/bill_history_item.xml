@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_corner_5"
+    android:orientation="vertical">
+    <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dime_18dp"
+            android:layout_marginLeft="@dimen/dime_17dp"
+            android:textSize="14sp"
+            android:textColor="@color/text_97"/>
+
+    <TextView
+            android:id="@+id/tv_room_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_12sp"
+            android:layout_below="@id/tv_date"
+            android:layout_marginTop="@dimen/dp_23"
+            android:layout_marginLeft="@dimen/dime_17dp"
+            android:text="房号:  "/>
+
+    <TextView
+            android:id="@+id/tv_room_no_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_date"
+            android:layout_marginTop="@dimen/dp_23"
+            android:layout_toRightOf="@+id/tv_room_no"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/dime_12sp" />
+
+    <TextView
+            android:id="@+id/tv_park_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_97"
+            android:textSize="@dimen/dime_12sp"
+            android:layout_below="@id/tv_room_no_name"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginLeft="@dimen/dime_17dp"
+            android:text="车位:  "/>
+    <TextView
+            android:id="@+id/tv_park_no_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/dime_12sp"
+            android:layout_below="@id/tv_room_no_name"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_toRightOf="@+id/tv_park_no"/>
+
+    <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/title_text_color"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_18"
+            android:textSize="@dimen/dime_20sp"/>
+
+    <TextView
+            android:id="@+id/tv_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_64"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_park_no_name"
+            android:layout_marginTop="26dp"
+            android:text="查看详情 >"
+            android:textSize="@dimen/dime_12sp"/>
+
+    <ImageView
+            android:id="@+id/iv_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_23"
+            android:layout_below="@+id/tv_detail"
+            android:background="@mipmap/divider"/>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_bg"
+    android:paddingBottom="@dimen/dp_1">
+
+    <RelativeLayout
+            android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8">
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/dime_16dp"
+            android:layout_marginRight="@dimen/dime_16dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_avatar_default_family"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_avatar">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/text"/>
+            <TextView
+                android:id="@+id/tv_type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:textSize="14sp"
+                android:textColor="@color/text_91"/>
+
+            <TextView
+                android:id="@+id/tv_myself"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="@dimen/dp_4"
+                android:textSize="10sp"
+                android:textColor="@color/main"
+                android:background="@drawable/shape_f8a49_2dp"
+                android:layout_toRightOf="@id/tv_name"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_alignBaseline="@id/tv_name"
+                android:paddingTop="@dimen/dp_2"
+                android:paddingBottom="@dimen/dp_2"
+                android:paddingLeft="@dimen/dp_4"
+                android:paddingRight="@dimen/dp_4"
+                android:text="@string/myself"
+                android:visibility="gone"/>
+
+            <TextView
+                    android:id="@+id/tv_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dime_16dp"
+                    android:layout_marginRight="@dimen/dime_16dp"
+                    android:drawableRight="@mipmap/chevron"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/tv_member_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dime_16dp"
+                android:text="@string/delete"
+                android:textColor="@color/text_91"
+                android:textSize="@dimen/dime_14sp"
+                android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>
